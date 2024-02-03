@@ -57,6 +57,40 @@
 
 .section3 h2{
     font-size: 45px;
-    font-weight: 900;
+    font-weight: 800;
     padding: 50px 0;
+}
+
+.section3 ul {
+  list-style: none;
+  padding-bottom: 30px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section3 li {
+  flex: 0 0 30%; /* Three items in a row */
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.section3 li img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.section3 li h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.section3 li p {
+  color: #666; /* Set the color of the description */
 }
