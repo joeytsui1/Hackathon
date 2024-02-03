@@ -1,0 +1,8 @@
+.doctor-page{
+    margin: 150px 0;
+}
+
+.doctor-page-banner{
+    display: flex;
+    justify-content: center;
+}

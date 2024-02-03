@@ -118,9 +118,7 @@ const HomePage = () => {
                 of x-ray technology that is used to measure bone loss and to
                 predict risk of bone fracture. DXA is most often performed on
                 the lower spine and hips. Many national guidelines recommend
-                testing all women age 65 and over. Depending on clinical risk
-                factors, testing in men or postmenopausal women can also be
-                considered.
+                testing all women age 65 and over.
               </p>
             </li>
             <li>
@@ -132,12 +130,7 @@ const HomePage = () => {
                 detailed images of the body. CT scans are one of the best tools
                 to look for sources of pain in the abdomen or pelvis, to find
                 the causes of breathing difficulty, to show the extent of
-                cancers, or to demonstrate problems of the skeleton. We often
-                perform CTs to examine lung nodules, liver masses, and to follow
-                stones in the kidneys and bladder. Some of the most
-                sophisticated uses of CT include examination of the heart, the
-                blood vessels, and to look at the inside of the colon for
-                cancer.
+                cancers, or to demonstrate problems of the skeleton.
               </p>
             </li>
             <li>
@@ -163,16 +156,97 @@ const HomePage = () => {
                 conditions anywhere in the body. MRI uses a strong magnetic
                 field and radiofrequency pulses to produce clear and detailed
                 pictures. MRI does not use ionizing radiation and does not
-                involve x-ray exposure. Detailed MR images allow physicians to
-                better evaluate various parts of the body and determine the
-                presence of certain diseases that may not be assessed adequately
-                with other imaging methods such as x-ray, ultrasound or computed
-                tomography (CT scanning).
+                involve x-ray exposure.
               </p>
             </li>
           </ul>
-
           <a href="#"> Show More </a>
+        </div>
+
+        <div className="container">
+          <div className="physician-section">
+            <h2>Our Physicians</h2>
+            <ul>
+              <li>
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
+                <h3>James Chang, M.D., FACR</h3>
+                <h3>Board Certified by the American Board of Radiology</h3>
+              </li>
+              <li>
+                <img src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"></img>
+                <h3>Calvin Lo, M.D.</h3>
+                <h3>Board Certified by the American Board of Radiology</h3>
+              </li>
+              <li>
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
+                <h3>Calvin Lo, M.D.</h3>
+                <h3>Board Certified by the American Board of Radiology</h3>
+              </li>
+              <li>
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
+                <h3>Calvin Lo, M.D.</h3>
+                <h3>Board Certified by the American Board of Radiology</h3>
+              </li>
+              <li>
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
+                <h3>Calvin Lo, M.D.</h3>
+                <h3>Board Certified by the American Board of Radiology</h3>
+              </li>
+              <li>
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
+                <h3>Calvin Lo, M.D.</h3>
+                <h3>Board Certified by the American Board of Radiology</h3>
+              </li>
+            </ul>
+            <a href="#"> Show More </a>
+          </div>
+        </div>
+
+        <div className="container">
+          <div class="contact-section">
+            <h2>Contact Us</h2>
+
+            <div class="contact-info">
+              <p>CP Advanced Imaging</p>
+              <p>155 Canal Street</p>
+              <p>New York, NY 10013</p>
+            </div>
+
+            <div class="contact-details">
+              <div>
+                <h3>General Information</h3>
+                <p>Tel: (212) 219-9135</p>
+                <p>Fax: (212) 219-9291</p>
+              </div>
+
+              <div>
+                <h3>MRI</h3>
+                <p>Tel: (212) 431-9626</p>
+                <p>Fax: (646) 898-0691</p>
+              </div>
+
+              <div>
+                <h3>CT & PET/CT</h3>
+                <p>Tel: (646) 898-0660</p>
+                <p>Fax: (646) 898-0695</p>
+              </div>
+
+              <div>
+                <h3>All Other Exams</h3>
+                <p>Tel: (212) 431-9010</p>
+                <p>Fax: (646) 898-0690</p>
+              </div>
+
+              <div>
+                <h3>Billing Services</h3>
+                <p>CP Advanced Imaging</p>
+                <p>155 Canal Street</p>
+                <p>New York, NY 10013</p>
+                <p>Tel: (646) 898-0680</p>
+                <p>Fax: (212) 431-4253</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

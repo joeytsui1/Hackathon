@@ -11,19 +11,19 @@ const NavBar = () => {
           <div className="navlink">
             <ul>
               <li className="link">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className="link">
-                <a href="#">About</a>
+                <a href="/about">About</a>
               </li>
               <li className="link">
-                <a href="#">Services</a>
+                <a href="/services">Services</a>
               </li>
               <li className="link">
-                <a href="#">Physicians</a>
+                <a href="/physicians">Physicians</a>
               </li>
               <li className="link">
-                <a href="#">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>

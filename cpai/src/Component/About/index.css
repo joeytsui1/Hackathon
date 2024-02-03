@@ -1,0 +1,17 @@
+.about-section{
+    margin: 200px 0;
+}
+
+.about-section{
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-section > *{
+    margin-bottom: 20px;
+}

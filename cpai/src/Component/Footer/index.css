@@ -1,0 +1,43 @@
+.footer-container{
+    background-color: rgb(5, 22, 77);
+}
+
+.footer-section{
+    display: flex;
+    justify-content: space-around;
+    max-width: 80%;
+    margin: auto;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li  {
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  color: white;
+}
+
+.footer-section li a {
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  color: white;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px; /* Adjust the margin as needed */
+}
+
+.trademark-section{
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trademark-links > a {
+    margin-right: 10px;
+    color: white;
+}
