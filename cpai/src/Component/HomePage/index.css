@@ -1,0 +1,62 @@
+.section2 {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  position: relative; /* Ensure position relative is set */
+
+}
+
+.section2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.carousel-button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+  opacity: 0.5;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-button.active {
+  background-color: white;
+  opacity: 1;
+}
+/* Section 3 - Services */
+
+.section3{
+    margin: 50px 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 h2{
+    font-size: 45px;
+    font-weight: 900;
+    padding: 50px 0;
+}

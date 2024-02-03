@@ -3,7 +3,7 @@ const NavBar = () => {
   return (
     <>
       <div className="section1">
-        <header className="container">
+        <nav className="container">
           <div className="logo">
             <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/cp-logo-est-1978.jpg"></img>
           </div>
@@ -27,7 +27,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-        </header>
+        </nav>
       </div>
     </>
   );
