@@ -1,6 +1,7 @@
 import './index.css'
 import GoogleMapComponent from '../Maps';
 const About = () => {
+  
     return (
       <>
         <div className="container">
