@@ -1,13 +1,14 @@
 import "./index.css";
+import image1 from "../../images/cphomeimage-fotor-20240204174922.jpg"
+import image2 from "../../images/pic2.jpeg";
 import React from "react";
 import { useState, useEffect } from "react";
 import GoogleMapComponent from "../Maps";
 
 const HomePage = () => {
   const carouselImages = [
-    "https://21cenrad.com/wp-content/uploads/2018/02/21cri-hero.jpg",
-    "https://21cenrad.com/wp-content/uploads/2018/02/21cri-hero.jpg",
-    "https://21cenrad.com/wp-content/uploads/2018/02/21cri-hero.jpg",
+    image1,
+    image2,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,7 +19,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
-    }, 10000);
+    }, 15000);
     return () => clearInterval(interval);
   }, [currentIndex, carouselImages.length]);
 
@@ -285,9 +286,6 @@ const HomePage = () => {
 
               <div>
                 <h3>Billing Services</h3>
-                <p>CP Advanced Imaging</p>
-                <p>155 Canal Street</p>
-                <p>New York, NY 10013</p>
                 <p>Tel: (646) 898-0680</p>
                 <p>Fax: (212) 431-4253</p>
               </div>

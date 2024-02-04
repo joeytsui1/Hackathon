@@ -7,11 +7,12 @@ max-width: 80%;
 .service-details {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .service-image {
   max-width: 500px; /* Adjust the width as needed */
-  height: 400px;
+  height: 300px;
   margin-right: 20px; /* Add some spacing between image and text */
 }
 
@@ -29,7 +30,7 @@ max-width: 80%;
 @media screen and (max-width: 1450px) {
 
   .service-image {
-    width: 450px;
+    width: 300px;
   }
 }
 @media screen and (max-width: 1250px) {
