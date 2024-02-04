@@ -54,43 +54,51 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+      {/* _____________________________________________________________ */}
 
       <div className="container">
         <div className="section3">
           <h2>Our Services</h2>
           <ul>
             <li>
-              <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/11/chestxrayrevised-285x300.jpg"></img>
-              <h3>Digital X-Ray</h3>
-              <p>
-                Imaging with x-rays involves exposing a part of the body to a
-                small dose of radiation to produce a digital image. X-rays are
-                most commonly used to diagnose diseases of the chest (such as
-                pneumonia or lung cancer) and bone disorders (such as arthritis
-                or bone fractures).
-              </p>
+              <a href="/services/digital-x-ray">
+                <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/11/chestxrayrevised-285x300.jpg"></img>
+                <h3>Digital X-Ray</h3>
+                <p>
+                  Imaging with x-rays involves exposing a part of the body to a
+                  small dose of radiation to produce a digital image. X-rays are
+                  most commonly used to diagnose diseases of the chest (such as
+                  pneumonia or lung cancer) and bone disorders (such as
+                  arthritis or bone fractures).
+                </p>
+              </a>
             </li>
             <li>
-              <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/SONO-CAROTID.jpg"></img>
-              <h3>Ultrasound</h3>
-              <p>
-                Ultrasound scanning, also called “ultrasound imaging” or
-                “sonography,” uses high-frequency sound waves to produce images
-                of the body. Ultrasound does not use ionizing radiation and does
-                not involve x-ray exposure.
-              </p>
+              <a href="/services/ultrasound">
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/SONO-CAROTID.jpg"></img>
+                <h3>Ultrasound</h3>
+                <p>
+                  Ultrasound scanning, also called “ultrasound imaging” or
+                  “sonography,” uses high-frequency sound waves to produce
+                  images of the body. Ultrasound does not use ionizing radiation
+                  and does not involve x-ray exposure.
+                </p>
+              </a>
             </li>
             <li>
-              <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/Mammo-Breast-Right-218x300.jpg"></img>
-              <h3>Digital Mammography</h3>
-              <p>
-                Mammography is a low-dose x-ray examination of the breast. A
-                mammogram is used in the early detection and diagnosis of breast
-                diseases. Current national guidelines recommend annual screening
-                mammography for all women age 40 and over.
-              </p>
+              <a href="/services/digital-mammogram">
+                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/Mammo-Breast-Right-218x300.jpg"></img>
+                <h3>Digital Mammography</h3>
+                <p>
+                  Mammography is a low-dose x-ray examination of the breast. A
+                  mammogram is used in the early detection and diagnosis of
+                  breast diseases. Current national guidelines recommend annual
+                  screening mammography for all women age 40 and over.
+                </p>
+              </a>
             </li>
             <li>
+              <a href="/services/fluoroscopy">
               <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/stomach-300x213.jpg"></img>
               <h3>Fluoroscopy</h3>
               <p>
@@ -99,8 +107,10 @@ const HomePage = () => {
                 consecutive x-rays, a video of the organ of interest is
                 generated.
               </p>
+              </a>
             </li>
             <li>
+              <a href="/services/thyroid-biopsy">
               <img src="https://cpadvancedimaging.com/wp-content/uploads/2013/06/Thyroid-biopsy-300x194.png"></img>
               <h3>Thyroid Biopsy</h3>
               <p>
@@ -110,8 +120,10 @@ const HomePage = () => {
                 pathologist will examine the cells under a microscope to
                 determine if they are benign or cancerous.
               </p>
+              </a>
             </li>
             <li>
+              <a href="/services/bone-densitometry">
               <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/dexa.jpg"></img>
               <h3>Bone Densitometry</h3>
               <p>
@@ -119,11 +131,12 @@ const HomePage = () => {
                 absorptiometry (DXA) or bone densitometry, is an enhanced form
                 of x-ray technology that is used to measure bone loss and to
                 predict risk of bone fracture. DXA is most often performed on
-                the lower spine and hips. Many national guidelines recommend
-                testing all women age 65 and over.
+                the lower spine and hips.
               </p>
+              </a>
             </li>
             <li>
+              <a href="/services/ct-scan">
               <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/CT-ABDOMEN-sag.Ser6_.Img48-300x199.jpg"></img>
               <h3>CT Scan</h3>
               <p>
@@ -134,8 +147,10 @@ const HomePage = () => {
                 the causes of breathing difficulty, to show the extent of
                 cancers, or to demonstrate problems of the skeleton.
               </p>
+              </a>
             </li>
             <li>
+              <a href="/services/pet-ct">
               <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/PET-CORONAL-image-2-188x300.jpg"></img>
               <h3>PET/CT</h3>
               <p>
@@ -144,12 +159,12 @@ const HomePage = () => {
                 using other conventional imaging procedures. Using a small
                 amount of radioactive tracer, PET/CT is often used to
                 distinguish between healthy and abnormal tissue such as in
-                cancer. Because PET/CT is able to pinpoint molecular activity
-                throughout the body, it has the potential to identify cancer at
-                its earliest stages.
+                cancer.
               </p>
+              </a>
             </li>
             <li>
+              <a href="/services/mri">
               <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrbrainrevised.Ser12.jpg"></img>
               <h3>MRI</h3>
               <p>
@@ -160,10 +175,12 @@ const HomePage = () => {
                 pictures. MRI does not use ionizing radiation and does not
                 involve x-ray exposure.
               </p>
+              </a>
             </li>
           </ul>
-          <a href="#"> Show More </a>
+          <a href="/services"> Show More </a>
         </div>
+        {/* __________________________________________________________________________________________ */}
 
         <div className="container">
           <div className="physician-section">
@@ -227,6 +244,7 @@ const HomePage = () => {
             <a href="/physicians"> Show More </a>
           </div>
         </div>
+        {/* ________________________________________________________________________ */}
 
         <div className="container">
           <div class="contact-section">

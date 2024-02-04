@@ -176,21 +176,22 @@ const DoctorPage = () => {
     <>
       <div className="container">
         <div className="doctor-page">
-          <div className="doctor-page-banner">
-            <img
-              src="https://cpadvancedimaging.com/wp-content/uploads/2018/09/physicians.jpg"
-              alt="Doctor Banner"
-            />
-          </div>
+
           <div className="doctor-info">
-            <h2>{doctor.title}</h2>
-            <img src={doctor.imageUrl} alt={doctor.title} />
-            <p>{doctor.description}</p>
-            <ul>
-              {doctor.achievements.map((achievement, index) => (
-                <li key={index}>{achievement}</li>
-              ))}
-            </ul>
+            <img
+              className="doctor-image"
+              src={doctor.imageUrl}
+              alt={doctor.title}
+            />
+            <div className="doctor-text">
+              <h2>{doctor.title}</h2>
+              <p>{doctor.description}</p>
+              <ul>
+                {doctor.achievements.map((achievement, index) => (
+                  <li key={index}>{achievement}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 .about-section{
     max-width: 60%;
-    margin: 193.2px auto 145px auto;
+    margin: 175px auto 1px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,4 +12,9 @@
 .about-section > *{
     margin-bottom: 20px;
     line-height: 2.1; /* Adjust the line-height value as needed */
+}
+
+.about-section h1{
+    font-size: 45;
+    font-weight: 800;
 }
