@@ -26,6 +26,10 @@ const Footer = () => {
             <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/wisely.jpg    "></img>
             <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/gently.jpg"></img>
           </div>
+
+          <div className="logo">
+            <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/cp-logo-est-1978.jpg"></img>
+          </div>
         </div>
         <div className="container">
           <div className="trademark-section">

@@ -1,6 +1,8 @@
 import "./index.css";
 import React from "react";
 import { useState, useEffect } from "react";
+import GoogleMapComponent from "../Maps";
+
 const HomePage = () => {
   const carouselImages = [
     "https://21cenrad.com/wp-content/uploads/2018/02/21cri-hero.jpg",
@@ -168,37 +170,61 @@ const HomePage = () => {
             <h2>Our Physicians</h2>
             <ul>
               <li>
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
-                <h3>James Chang, M.D., FACR</h3>
-                <h3>Board Certified by the American Board of Radiology</h3>
+                <a href="/physicians/james-chang">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
+                    alt="James Chang"
+                  />
+                  <h3>James Chang, M.D., FACR</h3>
+                </a>
               </li>
               <li>
-                <img src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"></img>
-                <h3>Calvin Lo, M.D.</h3>
-                <h3>Board Certified by the American Board of Radiology</h3>
+                <a href="/physicians/calvin-lo">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
+                    alt="James Chang"
+                  />
+                  <h3>Calvin Lo, M.D.</h3>
+                </a>
               </li>
               <li>
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
-                <h3>Calvin Lo, M.D.</h3>
-                <h3>Board Certified by the American Board of Radiology</h3>
+                <a href="/physicians/heather-osbourne">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
+                    alt="James Chang"
+                  />
+                  <h3>Heather L. Osborne, M.D.</h3>
+                </a>
               </li>
               <li>
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
-                <h3>Calvin Lo, M.D.</h3>
-                <h3>Board Certified by the American Board of Radiology</h3>
+                <a href="/physicians/pouneh-fallahi">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
+                    alt="James Chang"
+                  />
+                  <h3>Pouneh Fallahi, M.D. MPH</h3>
+                </a>
               </li>
               <li>
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
-                <h3>Calvin Lo, M.D.</h3>
-                <h3>Board Certified by the American Board of Radiology</h3>
+                <a href="/physicians/sabrina-pieroni">
+                  <img
+                    src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
+                    alt="James Chang"
+                  />
+                  <h3>Sabrina Pieroni, M.D.</h3>
+                </a>
               </li>
               <li>
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"></img>
-                <h3>Calvin Lo, M.D.</h3>
-                <h3>Board Certified by the American Board of Radiology</h3>
+                <a href="/physicians/robert-lautin">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
+                    alt="James Chang"
+                  />
+                  <h3>Robert F. Lautin, M.D.</h3>
+                </a>
               </li>
             </ul>
-            <a href="#"> Show More </a>
+            <a href="/physicians"> Show More </a>
           </div>
         </div>
 
@@ -211,6 +237,8 @@ const HomePage = () => {
               <p>155 Canal Street</p>
               <p>New York, NY 10013</p>
             </div>
+
+            <GoogleMapComponent></GoogleMapComponent>
 
             <div class="contact-details">
               <div>

@@ -1,8 +1,45 @@
-.doctor-page{
-    margin: 150px 0;
+.doctor-page {
+  margin: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.doctor-page-banner{
-    display: flex;
-    justify-content: center;
+.doctor-page-banner img {
+  max-width: 100%;
+  width: 1350px;
+  max-height: 300px; /* Adjust as needed */
+  /* object-fit: cover; */
+}
+
+.doctor-info {
+  margin-top: 20px; /* Adjust as needed */
+  text-align: center;
+}
+
+.doctor-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.doctor-info img {
+  width: 200px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make it a circular image */
+}
+
+.doctor-info p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.doctor-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.doctor-info li {
+  font-size: 14px;
+  margin-bottom: 5px;
 }
