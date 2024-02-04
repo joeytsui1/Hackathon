@@ -1,4 +1,6 @@
-import "./index.css"
+import "./index.css";
+import DarkModeToggle from "../DarkModeToggle";
+
 const NavBar = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const NavBar = () => {
 
           <div className="navlink">
             <ul>
+              <DarkModeToggle />
               <li className="link">
                 <a href="/">Home</a>
               </li>

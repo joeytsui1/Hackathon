@@ -4,6 +4,8 @@
 
 }
 
+
+
 .logo img {
     width: 125px;
     /* height: 100px; */
@@ -30,6 +32,12 @@
   color: black;
 }
 
+.dark .link a{
+  position: relative;
+  padding-bottom: 5px;
+  color: white;
+}
+
 .link a::after {
   content: "";
   position: absolute;
@@ -38,6 +46,17 @@
   bottom: 0;
   left: 0;
   background-color: rgb(29, 73, 142);
+  transition: all 0.3s ease;
+}
+
+.dark a::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(125, 170, 241);
   transition: all 0.3s ease;
 }
 
@@ -51,5 +70,15 @@
   width: 100%;
   z-index: 1000;
   background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5); /* Adjust the values as needed */
+}
+
+
+.dark .section1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0b003a;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5); /* Adjust the values as needed */
 }
