@@ -1,0 +1,50 @@
+
+.service-page-container {
+max-width: 80%;
+ margin: 175px auto 125px auto ;
+}
+
+.service-details {
+  display: flex;
+  align-items: center;
+}
+
+.service-image {
+  max-width: 500px; /* Adjust the width as needed */
+  height: 400px;
+  margin-right: 20px; /* Add some spacing between image and text */
+}
+
+.service-info {
+  margin-top: 20px;
+}
+
+
+.service-info > p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1450px) {
+
+  .service-image {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .service-details {
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .service-image {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 20px; /* Add some spacing below image on smaller screens */
+  }
+
+  .service-info {
+    margin-top: 10px;
+  }
+}

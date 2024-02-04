@@ -73,7 +73,7 @@
 .section3 li {
   flex: 0 0 calc(33.33% - 20px); /* Three items in a row initially with some margin */
   width: calc(33.33% - 20px);
-  margin: 10px 10px 20px 10px;
+  margin: 10px 10px 40px 10px;
   text-align: center;
   box-sizing: border-box;
   line-height: 1.5;
@@ -81,7 +81,7 @@
 
 .section3 li img {
   width: 100%;
-  max-height: 150px;
+  max-height: 250px;
   object-fit: cover;
   border-radius: 8px;
 }

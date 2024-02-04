@@ -14,7 +14,7 @@ import ServicePage from "./Component/ServicePage";
 function App() {
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar></NavBar> 
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
