@@ -4,6 +4,29 @@ import LanguageSelector from "../LanguageSwitcher";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 
 const NavBar = () => {
+  const translations = {
+    home: {
+      en: "Home",
+      cn: "首页",
+    },
+    about: {
+      en: "About",
+      cn: "关于我们",
+    },
+    services: {
+      en: "Services",
+      cn: "服务",
+    },
+    physicians: {
+      en: "Physicians",
+      cn: "医生",
+    },
+    contact: {
+      en: "Contact",
+      cn: "联系我们",
+    },
+  };
+
   const { selectedLanguage, changeLanguage } = useLanguage();
 
   const handleLanguageChange = (language) => {
@@ -26,30 +49,20 @@ const NavBar = () => {
                 onChange={handleLanguageChange}
               ></LanguageSelector>
               <li className="link">
-                <a href="/">
-                  Home
-                </a>
+                <a href="/">{translations.home[selectedLanguage]}</a>
               </li>
               <li className="link">
-                <a href="/about">
-                  About
-                </a>
+                <a href="/about">{translations.about[selectedLanguage]}</a>
               </li>
               <li className="link">
                 <a href="/services">
-                  Services
+                  {translations.services[selectedLanguage]}
                 </a>
               </li>
               <li className="link">
-                <a href="/physicians">
-                  Physicians
-                </a>
+                {translations.physicians[selectedLanguage]}
               </li>
-              <li className="link">
-                <a href="/contact">
-                  Contact
-                </a>
-              </li>
+              <li className="link">{translations.contact[selectedLanguage]}</li>
               <DarkModeToggle />
             </ul>
           </div>
