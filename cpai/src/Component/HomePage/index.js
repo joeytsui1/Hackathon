@@ -45,13 +45,12 @@ const HomePage = () => {
     }
   }, [selectedLanguage]);
 
-
   const handleServicesSpeak = () => {
     handleStop();
 
     if (serviceToSpeak) {
       const speech = new SpeechSynthesisUtterance(serviceToSpeak);
-      speech.lang = selectedLanguage === 'cn' ? 'zh-CN' : 'en-US';
+      speech.lang = selectedLanguage === "cn" ? "zh-CN" : "en-US";
       speechSynthesisRef.current = speech; // Store the speech synthesis instance in the ref
       window.speechSynthesis.speak(speech);
       setIsServicesSpeaking(true);
@@ -71,7 +70,7 @@ const HomePage = () => {
   };
 
   // const handleContactSpeak = () => {
-  //   handleStop(); 
+  //   handleStop();
 
   //   if (contactText) {
   //     const speech = new SpeechSynthesisUtterance(contactText);
@@ -90,13 +89,13 @@ const HomePage = () => {
     // setIsContactSpeaking(false);
   };
 
-
   const generatePhysiciansText = () => {
     // Extracting the heading text
-    const headingText = selectedLanguage === "en"
-      ? data.ourPhysiciansHeading
-      : data.ourPhysiciansHeading;
-    
+    const headingText =
+      selectedLanguage === "en"
+        ? data.ourPhysiciansHeading
+        : data.ourPhysiciansHeading;
+
     // Extracting the physician names
     const physicianNames = Array.from(
       document.querySelectorAll(".physician-section h3")
@@ -105,9 +104,11 @@ const HomePage = () => {
     // Combining the heading text and physician names
     return `${headingText}. ${physicianNames.join(". ")}`;
   };
-  
+
   const generateServicesText = () => {
-    const servicesText = data.servicesData.map(service => `${service.title}. ${service.description}`).join(" ");
+    const servicesText = data.servicesData
+      .map((service) => `${service.title}. ${service.description}`)
+      .join(" ");
     return servicesText;
   };
 
@@ -123,45 +124,42 @@ const HomePage = () => {
   //   setContactText(contactText);
   // }, [selectedLanguage]);
 
-
   return (
-
     <>
-    <div className="home">
-      <section className="section2" aria-label="Image Carousel Section">
-
-        {carouselImages.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`carousel-slide-${index}`}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              opacity: index === currentIndex ? 1 : 0,
-              transition: "opacity 1s ease-in-out",
-            }}
-          />
-        ))}
-        <div className="carousel-buttons" aria-label="Carousel Buttons">
-          {carouselImages.map((_, index) => (
-            <button
+      <div className="home">
+        <section className="section2" aria-label="Image Carousel Section">
+          {carouselImages.map((image, index) => (
+            <img
               key={index}
-              className={`carousel-button ${
-                index === currentIndex ? "active" : ""
-              }`}
-              onClick={() => handleButtonClick(index)}
+              src={image}
+              alt={`carousel-slide-${index}`}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                opacity: index === currentIndex ? 1 : 0,
+                transition: "opacity 1s ease-in-out",
+              }}
             />
           ))}
-        </div>
-      </section>
+          <div className="carousel-buttons" aria-label="Carousel Buttons">
+            {carouselImages.map((_, index) => (
+              <button
+                key={index}
+                className={`carousel-button ${
+                  index === currentIndex ? "active" : ""
+                }`}
+                onClick={() => handleButtonClick(index)}
+              />
+            ))}
+          </div>
+        </section>
 
-      <div className="container">
-        <section className="section3" aria-label="Our Services Section">
+        <div className="container">
+          <section className="section3" aria-label="Our Services Section">
             <h2>Our Services</h2>
             <ul>
               {data.servicesData.slice(0, 9).map((service, index) => (
@@ -174,169 +172,169 @@ const HomePage = () => {
                 </li>
               ))}
             </ul>
-              {isServicesSpeaking ? (
-              <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button> 
-              ) : (
-                <button onClick={handleServicesSpeak}>{selectedLanguage === "en" ? "Read Services" : "读取服务"}</button>
-              )} 
+            {isServicesSpeaking ? (
+              <button onClick={handleStop}>
+                {selectedLanguage === "en" ? "Stop" : "停止"}
+              </button>
+            ) : (
+              <button onClick={handleServicesSpeak}>
+                {selectedLanguage === "en" ? "Read Services" : "读取服务"}
+              </button>
+            )}
             <a className="show-more-link" href="/services">
               {selectedLanguage === "en" ? engData.showMore : cnData.showMore}
             </a>
-      
-          {/* __________________________________________________________________________________________ */}
 
-          <div className="container">
-            <div className="physician-section">
-              <h2>
-                {selectedLanguage === "en"
-                  ? engData.ourPhysiciansHeading
-                  : cnData.ourPhysiciansHeading}
-              </h2>
-              <ul>
-                <li>
-                  <a href="/physicians/james-chang">
-                    <img
-                      src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
-                      alt="James Chang, M.D., FACR"
-                    />
-                    <h3>James Chang, M.D., FACR</h3>
-                  </a>
-                </li>
-                <li>
-                  <a href="/physicians/calvin-lo">
-                    <img
-                      src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
-                      alt="Calvin Lo, M.D."
-                    />
-                    <h3>Calvin Lo, M.D.</h3>
-                  </a>
-                </li>
-                <li>
-                  <a href="/physicians/heather-osbourne">
-                    <img
-                      src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
-                      alt="Heather Osbourne, M.D."
-                    />
-                    <h3>Heather L. Osborne, M.D.</h3>
-                  </a>
-                </li>
-                <li>
-                  <a href="/physicians/pouneh-fallahi">
-                    <img
-                      src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
-                      alt="Pouneh Fallahi, M.D. MPH"
-                    />
-                    <h3>Pouneh Fallahi, M.D. MPH</h3>
-                  </a>
-                </li>
-                <li>
-                  <a href="/physicians/sabrina-pieroni">
-                    <img
-                      src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
-                      alt="Sabrina Pieroni, M.D."
-                    />
-                    <h3>Sabrina Pieroni, M.D.</h3>
-                  </a>
-                </li>
-                <li>
-                  <a href="/physicians/robert-lautin">
-                    <img
-                      src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
-                      alt="Robert F. Lautin, M.D."
-                    />
-                    <h3>Robert F. Lautin, M.D.</h3>
-                  </a>
-                </li>
-              </ul>
+            {/* __________________________________________________________________________________________ */}
+
+            <div className="container">
+              <div className="physician-section">
+                <h2>
+                  {selectedLanguage === "en"
+                    ? engData.ourPhysiciansHeading
+                    : cnData.ourPhysiciansHeading}
+                </h2>
+                <ul>
+                  <li>
+                    <a href="/physicians/james-chang">
+                      <img
+                        src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
+                        alt="James Chang, M.D., FACR"
+                      />
+                      <h3>James Chang, M.D., FACR</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/physicians/calvin-lo">
+                      <img
+                        src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
+                        alt="Calvin Lo, M.D."
+                      />
+                      <h3>Calvin Lo, M.D.</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/physicians/heather-osbourne">
+                      <img
+                        src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
+                        alt="Heather Osbourne, M.D."
+                      />
+                      <h3>Heather L. Osborne, M.D.</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/physicians/pouneh-fallahi">
+                      <img
+                        src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
+                        alt="Pouneh Fallahi, M.D. MPH"
+                      />
+                      <h3>Pouneh Fallahi, M.D. MPH</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/physicians/sabrina-pieroni">
+                      <img
+                        src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
+                        alt="Sabrina Pieroni, M.D."
+                      />
+                      <h3>Sabrina Pieroni, M.D.</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/physicians/robert-lautin">
+                      <img
+                        src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
+                        alt="Robert F. Lautin, M.D."
+                      />
+                      <h3>Robert F. Lautin, M.D.</h3>
+                    </a>
+                  </li>
+                </ul>
                 {isPhysiciansSpeaking ? (
-                  <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button>
+                  <button onClick={handleStop}>
+                    {selectedLanguage === "en" ? "Stop" : "停止"}
+                  </button>
                 ) : (
-                  <button onClick={handlePhysiciansSpeak}>{selectedLanguage === "en" ? "Read Physicians" : "阅读医生"}</button>
+                  <button onClick={handlePhysiciansSpeak}>
+                    {selectedLanguage === "en" ? "Read Physicians" : "阅读医生"}
+                  </button>
                 )}
 
-              <a href="/physicians">
-                {" "}
-                {selectedLanguage === "en"
-                  ? engData.showMore
-                  : cnData.showMore}{" "}
-              </a>
-            </div>
-          </div>
-          </section>
-      </div>
-
-      <div className="container">
-          <section class="contact-section" aria-label="Contact Us Section">
-              <h2>
-                {selectedLanguage === "en"
-                  ? engData.contactUsHeading
-                  : cnData.contactUsHeading}
-              </h2>
-
-
-              <div className="contact-info" aria-label="Address">
-                <p>CP Advanced Imaging</p>
-                <p>155 Canal Street</p>
-                <p>New York, NY 10013</p>
+                <a href="/physicians">
+                  {" "}
+                  {selectedLanguage === "en"
+                    ? engData.showMore
+                    : cnData.showMore}{" "}
+                </a>
               </div>
+            </div>
+          </section>
+        </div>
 
-              <GoogleMapComponent aria-label="Interactive Map of CP Advanced Imaging Location" />
+        <div className="container">
+          <section className="contact-section" aria-label="Contact Us Section">
+            <h2>
+              {selectedLanguage === "en"
+                ? engData.contactUsHeading
+                : cnData.contactUsHeading}
+            </h2>
 
+            <div className="contact-info" aria-label="Our Address">
+              <p>CP Advanced Imaging</p>
+              <p>155 Canal Street</p>
+              <p>New York, NY 10013</p>
+            </div>
+
+            <GoogleMapComponent aria-label="Interactive Map of CP Advanced Imaging Location" />
 
             <div className="contact-details" aria-label="Contact Details">
-                <div aria-label="General Information">
-                  <h3>
-                    {selectedLanguage === "en"
-                      ? engData.generalInformationHeading
-                      : cnData.generalInformationHeading}
-                  </h3>
+              <div aria-label="General Information">
+                <h3>
+                  {selectedLanguage === "en"
+                    ? engData.generalInformationHeading
+                    : cnData.generalInformationHeading}
+                </h3>
 
-                  <p>Tel: (212) 219-9135</p>
-                  <p>Fax: (212) 219-9291</p>
-                </div>
+                <p>Tel: (212) 219-9135</p>
+                <p>Fax: (212) 219-9291</p>
+              </div>
 
+              <div aria-label="MRI">
+                <h3>
+                  {selectedLanguage === "en"
+                    ? engData.mriHeading
+                    : cnData.mriHeading}
+                </h3>{" "}
+                <p>Tel: (212) 431-9626</p>
+                <p>Fax: (646) 898-0691</p>
+              </div>
 
-                <div aria-label="MRI">
-                  <h3>
-                    {selectedLanguage === "en"
-                      ? engData.mriHeading
-                      : cnData.mriHeading}
-                  </h3>{" "}
-                  <p>Tel: (212) 431-9626</p>
-                  <p>Fax: (646) 898-0691</p>
-                </div>
+              <div aria-label="CT & PET/CT">
+                <h3>CT & PET/CT</h3>
+                <p>Tel: (646) 898-0660</p>
+                <p>Fax: (646) 898-0695</p>
+              </div>
 
-                <div aria-label="CT & PET/CT">
-                  <h3>CT & PET/CT</h3>
-                  <p>Tel: (646) 898-0660</p>
-                  <p>Fax: (646) 898-0695</p>
-                </div>
+              <div aria-label="All Other Exams">
+                <h3>
+                  {selectedLanguage === "en"
+                    ? engData.allOtherExamsHeading
+                    : cnData.allOtherExamsHeading}
+                </h3>
 
-
-
-                <div aria-label="All Other Exams">
-                  <h3>
-                    {selectedLanguage === "en"
-                      ? engData.allOtherExamsHeading
-                      : cnData.allOtherExamsHeading}
-                  </h3>
-
-                  <p>Tel: (212) 431-9010</p>
-                  <p>Fax: (646) 898-0690</p>
-                </div>
-
+                <p>Tel: (212) 431-9010</p>
+                <p>Fax: (646) 898-0690</p>
+              </div>
 
               <div aria-label="Billing Services">
-                  <h3>Billing Services</h3>
-                <div aria-label="Billing Services">
-                  <h3>
-                    {selectedLanguage === "en"
-                      ? engData.billingServicesHeading
-                      : cnData.billingServicesHeading}
-                  </h3>
-                  <p>Tel: (646) 898-0680</p>
-                  <p>Fax: (212) 431-4253</p>
-                </div>
+                <h3>Billing Services</h3>
+                <h3>
+                  {selectedLanguage === "en"
+                    ? engData.billingServicesHeading
+                    : cnData.billingServicesHeading}
+                </h3>
+                <p>Tel: (646) 898-0680</p>
+                <p>Fax: (212) 431-4253</p>
               </div>
 
               {/* {isContactSpeaking ? (
@@ -345,10 +343,8 @@ const HomePage = () => {
                 <button onClick={handleContactSpeak}>{selectedLanguage === "en" ? "Read Contact Information" : "读取联系信息"}</button>
               )} */}
             </div>
-
           </section>
-
-      </div>
+        </div>
       </div>
     </>
   );
