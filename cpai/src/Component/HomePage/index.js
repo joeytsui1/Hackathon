@@ -1,15 +1,12 @@
 import "./index.css";
-import image1 from "../../images/cphomeimage-fotor-20240204174922.jpg"
+import image1 from "../../images/cphomeimage-fotor-20240204174922.jpg";
 import image2 from "../../images/pic2.jpeg";
 import React from "react";
 import { useState, useEffect } from "react";
 import GoogleMapComponent from "../Maps";
 
 const HomePage = () => {
-  const carouselImages = [
-    image1,
-    image2,
-  ];
+  const carouselImages = [image1, image2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -25,7 +22,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="section2">
+      <section className="section2" aria-label="Image Carousel Section">
         {carouselImages.map((image, index) => (
           <img
             key={index}
@@ -43,7 +40,7 @@ const HomePage = () => {
             }}
           />
         ))}
-        <div className="carousel-buttons">
+        <div className="carousel-buttons" aria-label="Carousel Buttons">
           {carouselImages.map((_, index) => (
             <button
               key={index}
@@ -54,16 +51,21 @@ const HomePage = () => {
             />
           ))}
         </div>
-      </div>
-      {/* _____________________________________________________________ */}
+      </section>
 
       <div className="container">
-        <div className="section3">
+        <section className="section3" aria-label="Our Services Section">
           <h2>Our Services</h2>
           <ul>
             <li>
-              <a href="/services/digital-x-ray">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/11/chestxrayrevised-285x300.jpg"></img>
+              <a
+                href="/services/digital-x-ray"
+                aria-label="Digital X-Ray Service"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2012/11/chestxrayrevised-285x300.jpg"
+                  alt="Digital X-ray"
+                ></img>
                 <h3>Digital X-Ray</h3>
                 <p>
                   Imaging with x-rays involves exposing a part of the body to a
@@ -75,8 +77,11 @@ const HomePage = () => {
               </a>
             </li>
             <li>
-              <a href="/services/ultrasound">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/SONO-CAROTID.jpg"></img>
+              <a href="/services/ultrasound" aria-label="Ultrasound Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/SONO-CAROTID.jpg"
+                  alt="Ultrasound"
+                ></img>
                 <h3>Ultrasound</h3>
                 <p>
                   Ultrasound scanning, also called “ultrasound imaging” or
@@ -87,8 +92,14 @@ const HomePage = () => {
               </a>
             </li>
             <li>
-              <a href="/services/digital-mammogram">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/Mammo-Breast-Right-218x300.jpg"></img>
+              <a
+                href="/services/digital-mammogram"
+                aria-label="Digital Mammogram"
+              >
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/Mammo-Breast-Right-218x300.jpg"
+                  alt="Digital Mammogram"
+                ></img>
                 <h3>Digital Mammography</h3>
                 <p>
                   Mammography is a low-dose x-ray examination of the breast. A
@@ -99,99 +110,125 @@ const HomePage = () => {
               </a>
             </li>
             <li>
-              <a href="/services/fluoroscopy">
-              <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/stomach-300x213.jpg"></img>
-              <h3>Fluoroscopy</h3>
-              <p>
-                Fluoroscopy is a special x-ray technique that makes it possible
-                to see internal organs in motion. Through a series of
-                consecutive x-rays, a video of the organ of interest is
-                generated.
-              </p>
+              <a href="/services/fluoroscopy" aria-label="Fluoroscopy Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/stomach-300x213.jpg"
+                  alt="Fluoroscopy"
+                ></img>
+                <h3>Fluoroscopy</h3>
+                <p>
+                  Fluoroscopy is a special x-ray technique that makes it
+                  possible to see internal organs in motion. Through a series of
+                  consecutive x-rays, a video of the organ of interest is
+                  generated.
+                </p>
               </a>
             </li>
             <li>
-              <a href="/services/thyroid-biopsy">
-              <img src="https://cpadvancedimaging.com/wp-content/uploads/2013/06/Thyroid-biopsy-300x194.png"></img>
-              <h3>Thyroid Biopsy</h3>
-              <p>
-                During a fine needle aspiration biopsy of the thyroid, a small
-                sample of cells is removed from the thyroid gland. Samples of
-                the cells are put on a slide for review by the pathologist. The
-                pathologist will examine the cells under a microscope to
-                determine if they are benign or cancerous.
-              </p>
+              <a
+                href="/services/thyroid-biopsy"
+                aria-label="Thyroid Biopsy Service"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2013/06/Thyroid-biopsy-300x194.png"
+                  alt="Thyroid Biopsy"
+                ></img>
+                <h3>Thyroid Biopsy</h3>
+                <p>
+                  During a fine needle aspiration biopsy of the thyroid, a small
+                  sample of cells is removed from the thyroid gland. Samples of
+                  the cells are put on a slide for review by the pathologist.
+                  The pathologist will examine the cells under a microscope to
+                  determine if they are benign or cancerous.
+                </p>
               </a>
             </li>
             <li>
-              <a href="/services/bone-densitometry">
-              <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/dexa.jpg"></img>
-              <h3>Bone Densitometry</h3>
-              <p>
-                Bone density scanning, also called dual-energy x-ray
-                absorptiometry (DXA) or bone densitometry, is an enhanced form
-                of x-ray technology that is used to measure bone loss and to
-                predict risk of bone fracture. DXA is most often performed on
-                the lower spine and hips.
-              </p>
+              <a
+                href="/services/bone-densitometry"
+                aria-label="Bone Densitometry Service"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/dexa.jpg"
+                  alt="Bone Densitometry"
+                ></img>
+                <h3>Bone Densitometry</h3>
+                <p>
+                  Bone density scanning, also called dual-energy x-ray
+                  absorptiometry (DXA) or bone densitometry, is an enhanced form
+                  of x-ray technology that is used to measure bone loss and to
+                  predict risk of bone fracture. DXA is most often performed on
+                  the lower spine and hips.
+                </p>
               </a>
             </li>
             <li>
-              <a href="/services/ct-scan">
-              <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/CT-ABDOMEN-sag.Ser6_.Img48-300x199.jpg"></img>
-              <h3>CT Scan</h3>
-              <p>
-                A Computed Tomography or CT scan is an imaging test that
-                combines computers and 360-degree x-rays to produce highly
-                detailed images of the body. CT scans are one of the best tools
-                to look for sources of pain in the abdomen or pelvis, to find
-                the causes of breathing difficulty, to show the extent of
-                cancers, or to demonstrate problems of the skeleton.
-              </p>
+              <a href="/services/ct-scan" aria-label="CT Scan Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/CT-ABDOMEN-sag.Ser6_.Img48-300x199.jpg"
+                  alt="CT Scan"
+                ></img>
+                <h3>CT Scan</h3>
+                <p>
+                  A Computed Tomography or CT scan is an imaging test that
+                  combines computers and 360-degree x-rays to produce highly
+                  detailed images of the body. CT scans are one of the best
+                  tools to look for sources of pain in the abdomen or pelvis, to
+                  find the causes of breathing difficulty, to show the extent of
+                  cancers, or to demonstrate problems of the skeleton.
+                </p>
               </a>
             </li>
             <li>
-              <a href="/services/pet-ct">
-              <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/PET-CORONAL-image-2-188x300.jpg"></img>
-              <h3>PET/CT</h3>
-              <p>
-                PET/CT is an advanced imaging test that offers information on
-                both tissue metabolism and structure that is not attainable
-                using other conventional imaging procedures. Using a small
-                amount of radioactive tracer, PET/CT is often used to
-                distinguish between healthy and abnormal tissue such as in
-                cancer.
-              </p>
+              <a href="/services/pet-ct" aria-label="Pet CT Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/PET-CORONAL-image-2-188x300.jpg"
+                  alt="Pet CT"
+                ></img>
+                <h3>PET/CT</h3>
+                <p>
+                  PET/CT is an advanced imaging test that offers information on
+                  both tissue metabolism and structure that is not attainable
+                  using other conventional imaging procedures. Using a small
+                  amount of radioactive tracer, PET/CT is often used to
+                  distinguish between healthy and abnormal tissue such as in
+                  cancer.
+                </p>
               </a>
             </li>
             <li>
-              <a href="/services/mri">
-              <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrbrainrevised.Ser12.jpg"></img>
-              <h3>MRI</h3>
-              <p>
-                Magnetic Resonance Imaging provides highly detailed pictures of
-                anatomy and pathology to help evaluate a wide range of
-                conditions anywhere in the body. MRI uses a strong magnetic
-                field and radiofrequency pulses to produce clear and detailed
-                pictures. MRI does not use ionizing radiation and does not
-                involve x-ray exposure.
-              </p>
+              <a href="/services/mri" aria-label="MRI Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrbrainrevised.Ser12.jpg"
+                  alt="MRI"
+                ></img>
+                <h3>MRI</h3>
+                <p>
+                  Magnetic Resonance Imaging provides highly detailed pictures
+                  of anatomy and pathology to help evaluate a wide range of
+                  conditions anywhere in the body. MRI uses a strong magnetic
+                  field and radiofrequency pulses to produce clear and detailed
+                  pictures. MRI does not use ionizing radiation and does not
+                  involve x-ray exposure.
+                </p>
               </a>
             </li>
           </ul>
-          <a href="/services"> Show More </a>
-        </div>
-        {/* __________________________________________________________________________________________ */}
+          <a href="/services" aria-label="More Services"> Show More </a>
+        </section>
 
         <div className="container">
-          <div className="physician-section">
+          <section
+            className="physician-section"
+            aria-label="Our Physician Section"
+          >
             <h2>Our Physicians</h2>
             <ul>
               <li>
                 <a href="/physicians/james-chang">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
-                    alt="James Chang"
+                    alt="James Chang, M.D., FACR"
                   />
                   <h3>James Chang, M.D., FACR</h3>
                 </a>
@@ -200,7 +237,7 @@ const HomePage = () => {
                 <a href="/physicians/calvin-lo">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
-                    alt="James Chang"
+                    alt="Calvin Lo, M.D."
                   />
                   <h3>Calvin Lo, M.D.</h3>
                 </a>
@@ -209,7 +246,7 @@ const HomePage = () => {
                 <a href="/physicians/heather-osbourne">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
-                    alt="James Chang"
+                    alt="Heather Osbourne, M.D."
                   />
                   <h3>Heather L. Osborne, M.D.</h3>
                 </a>
@@ -218,7 +255,7 @@ const HomePage = () => {
                 <a href="/physicians/pouneh-fallahi">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
-                    alt="James Chang"
+                    alt="Pouneh Fallahi, M.D. MPH"
                   />
                   <h3>Pouneh Fallahi, M.D. MPH</h3>
                 </a>
@@ -227,7 +264,7 @@ const HomePage = () => {
                 <a href="/physicians/sabrina-pieroni">
                   <img
                     src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
-                    alt="James Chang"
+                    alt="Sabrina Pieroni, M.D."
                   />
                   <h3>Sabrina Pieroni, M.D.</h3>
                 </a>
@@ -236,61 +273,60 @@ const HomePage = () => {
                 <a href="/physicians/robert-lautin">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
-                    alt="James Chang"
+                    alt="Robert F. Lautin, M.D."
                   />
                   <h3>Robert F. Lautin, M.D.</h3>
                 </a>
               </li>
             </ul>
             <a href="/physicians"> Show More </a>
-          </div>
+          </section>
         </div>
-        {/* ________________________________________________________________________ */}
 
         <div className="container">
-          <div class="contact-section">
+          <section class="contact-section" aria-label="Contact Us Section">
             <h2>Contact Us</h2>
 
-            <div class="contact-info">
+            <div className="contact-info" aria-label="Address">
               <p>CP Advanced Imaging</p>
               <p>155 Canal Street</p>
               <p>New York, NY 10013</p>
             </div>
 
-            <GoogleMapComponent></GoogleMapComponent>
+            <GoogleMapComponent aria-label="Interactive Map of CP Advanced Imaging Location" />
 
-            <div class="contact-details">
-              <div>
+            <div className="contact-details" aria-label="Contact Details">
+              <div aria-label="General Information">
                 <h3>General Information</h3>
                 <p>Tel: (212) 219-9135</p>
                 <p>Fax: (212) 219-9291</p>
               </div>
 
-              <div>
+              <div aria-label="MRI">
                 <h3>MRI</h3>
                 <p>Tel: (212) 431-9626</p>
                 <p>Fax: (646) 898-0691</p>
               </div>
 
-              <div>
+              <div aria-label="CT & PET/CT">
                 <h3>CT & PET/CT</h3>
                 <p>Tel: (646) 898-0660</p>
                 <p>Fax: (646) 898-0695</p>
               </div>
 
-              <div>
+              <div aria-label="All Other Exams">
                 <h3>All Other Exams</h3>
                 <p>Tel: (212) 431-9010</p>
                 <p>Fax: (646) 898-0690</p>
               </div>
 
-              <div>
+              <div aria-label="Billing Services">
                 <h3>Billing Services</h3>
                 <p>Tel: (646) 898-0680</p>
                 <p>Fax: (212) 431-4253</p>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </>
