@@ -11,10 +11,10 @@ const DarkModeToggle = () => {
 
     const containerClassName = `dark-mode-toggle ${isDark ? "dark-mode" : ""} ${isDark ? "" : "light-mode"}`;
 
-
     return (
         <div className={containerClassName}>
-            <button onClick={toggleDarkMode} aria-label="Dark mode toggle">
+            <button onClick={toggleDarkMode} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}>
+                <span className="visually-hidden">{isDark ? "Switch to light mode" : "Switch to dark mode"}</span>
                 <div className="slider"></div>
             </button>
         </div>
@@ -22,5 +22,3 @@ const DarkModeToggle = () => {
 };
 
 export default DarkModeToggle;
-
-

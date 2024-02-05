@@ -12,6 +12,7 @@ video {
 }
 
 /* DarkModeToggle.css */
+
 .dark-mode-toggle {
     position: relative;
     width: 60px;
@@ -30,12 +31,14 @@ video {
     cursor: pointer;
     border-radius: 17px;
     padding: 2px;
+    position: relative;
     transition: background 0.3s ease; /* Add transition for smooth background color change */
 }
 
 .dark-mode-toggle .slider {
     position: absolute;
-    top: 2px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 2px;
     cursor: pointer;
     border-radius: 50%;
@@ -53,3 +56,27 @@ video {
 .dark-mode-toggle.dark-mode button {
     background: #999;
 }
+
+
+.dark-mode-toggle button:focus:not(:focus-visible) {
+    outline: none;
+    /* Remove outline for non-keyboard focus */
+}
+
+.dark-mode-toggle button:focus-visible {
+    outline: 2px solid #ffffff;
+    /* White outline */
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
