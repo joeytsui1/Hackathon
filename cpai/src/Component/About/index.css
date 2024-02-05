@@ -9,6 +9,16 @@
     flex-direction: column;
 }
 
+.dark .about-section {
+    max-width: 60%;
+    margin: 175px auto 1px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
 .about-section > *{
     margin-bottom: 20px;
     line-height: 2.1; /* Adjust the line-height value as needed */
