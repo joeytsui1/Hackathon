@@ -14,27 +14,27 @@ const NavBar = () => {
           <div className="navlink" aria-label="Nav Links">
             <ul>
               <li className="link">
-                <a href="/" role="button">
+                <a href="/">
                   Home
                 </a>
               </li>
               <li className="link">
-                <a href="/about" role="button">
+                <a href="/about">
                   About
                 </a>
               </li>
               <li className="link">
-                <a href="/services" role="button">
+                <a href="/services">
                   Services
                 </a>
               </li>
               <li className="link">
-                <a href="/physicians" role="button">
+                <a href="/physicians">
                   Physicians
                 </a>
               </li>
               <li className="link">
-                <a href="/contact" role="button">
+                <a href="/contact">
                   Contact
                 </a>
               </li>

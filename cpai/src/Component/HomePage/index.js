@@ -214,7 +214,7 @@ const HomePage = () => {
               </a>
             </li>
           </ul>
-          <a href="/services" aria-label="More Services" role="button">
+          <a href="/services" aria-label="More Services">
             {" "}
             Show More{" "}
           </a>
