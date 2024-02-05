@@ -30,27 +30,24 @@ video {
     cursor: pointer;
     border-radius: 17px;
     padding: 2px;
+    transition: background 0.3s ease; /* Add transition for smooth background color change */
 }
 
 .dark-mode-toggle .slider {
     position: absolute;
     top: 2px;
-    /* Adjust the top position to align with the center of the toggle button */
     left: 2px;
-    /* Adjust the left position to align with the start of the toggle button */
     cursor: pointer;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     background-color: #fff;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Add transition for smooth position change */
     z-index: 1;
-    /* Ensure the slider is above the toggle button */
 }
 
 .dark-mode-toggle.dark-mode .slider {
-    left: calc(100% - 32px);
-    /* Adjust the left position to align with the end of the toggle button */
+    transform: translateX(100%);
 }
 
 .dark-mode-toggle.dark-mode button {

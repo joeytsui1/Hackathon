@@ -10,28 +10,34 @@ import DoctorPage from "./Component/DoctorPage";
 import ServicePage from "./Component/ServicePage";
 // import ContactPage from "./Component/ContactPage";
 // import NotFoundPage from "./Component/NotFoundPage";
-
+import { LanguageProvider } from "./Component/LanguageSwitcher/LanguageContext";
 function App() {
   
   return (
-    <>
-      <NavBar></NavBar> 
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/services" element={<Services />}></Route>
-          <Route exact path="/services/:name" element={<ServicePage/>}></Route>
-          <Route exact path="/physicians" element={<Physicians />}></Route>
-          <Route
-            exact
-            path="/physicians/:name"
-            element={<DoctorPage />}
-          ></Route>
-        </Routes>
-      </Router>
-      <Footer></Footer>
-    </>
+    <LanguageProvider>
+      <>
+        <NavBar></NavBar>
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/services" element={<Services />}></Route>
+            <Route
+              exact
+              path="/services/:name"
+              element={<ServicePage />}
+            ></Route>
+            <Route exact path="/physicians" element={<Physicians />}></Route>
+            <Route
+              exact
+              path="/physicians/:name"
+              element={<DoctorPage />}
+            ></Route>
+          </Routes>
+        </Router>
+        <Footer></Footer>
+      </>
+    </LanguageProvider>
   );
 }
 

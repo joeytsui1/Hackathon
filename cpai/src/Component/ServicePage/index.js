@@ -1,10 +1,13 @@
 import "./index.css"
 import { useParams } from "react-router-dom";
 import serviceObj from "./data";
-
+import chineseServiceObj from "./chineseData";
+import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 const ServicePage = () => {
   const { name } = useParams();
-  const service = serviceObj[name];
+  const { selectedLanguage } = useLanguage();
+  const data = selectedLanguage === "en" ? serviceObj : chineseServiceObj;
+  const service = data[name];
 
   return (
     <>
