@@ -3,10 +3,40 @@ import cnData from '../HomePage/cnData';
 import engData from '../HomePage/engData';
 import GoogleMapComponent from '../Maps';
 import { useLanguage } from '../LanguageSwitcher/LanguageContext';
+import React, { useState, useEffect, useRef } from "react";
+
+
 const About = () => {
 
   const { selectedLanguage } = useLanguage();
   const data = selectedLanguage === "en" ? engData : cnData;
+
+  const [companyTextToSpeak, setCompanyTextToSpeak] = useState("");
+  const [isCompanyTextSpeaking, setIsCompanyTextSpeaking] = useState(false);
+
+  const speechSynthesisRef = useRef(null);
+
+  useEffect(() => {
+    setCompanyTextToSpeak(
+      `${data.ourCompanyText1} ${data.ourCompanyText2}`
+    );
+  }, [selectedLanguage]);
+
+  const handleCompanyTextSpeak = () => {
+    handleStop();
+    if (companyTextToSpeak) {
+      const speech = new SpeechSynthesisUtterance(companyTextToSpeak);
+      speech.lang = selectedLanguage === "cn" ? "zh-CN" : "en-US";
+      speechSynthesisRef.current = speech;
+      window.speechSynthesis.speak(speech);
+      setIsCompanyTextSpeaking(true);
+    }
+  };
+
+  const handleStop = () => {
+    window.speechSynthesis.cancel();
+    setIsCompanyTextSpeaking(false);
+  };
 
     return (
       <>
@@ -28,7 +58,13 @@ const About = () => {
                 ? engData.ourCompanyText2
                 : cnData.ourCompanyText2}
             </p>
-
+          {isCompanyTextSpeaking ? (
+            <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button> 
+          ) : (
+            <button onClick={handleCompanyTextSpeak}>
+              {selectedLanguage === "en" ? "Read About Our Company" : "读取关于我们的公司"}
+            </button>
+          )}
             <div>
               <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/paboutus.jpg"></img>
             </div>

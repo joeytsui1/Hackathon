@@ -4,6 +4,12 @@ max-width: 80%;
  margin: 175px auto 125px auto ;
 }
 
+.dark .service-page-container{
+  max-width: 80%;
+    margin: 175px auto 125px auto;
+    color: white;
+}
+
 .service-details {
   display: flex;
   align-items: center;
