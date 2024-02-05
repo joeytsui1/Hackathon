@@ -340,5 +340,11 @@ a{
 
 
 .dark .show-more-link {
-  color: white;
+  color: blue;
+  text-decoration: underline;
+}
+
+.show-more-link {
+  color: blue;
+  text-decoration: underline;
 }
