@@ -27,8 +27,11 @@ const HomePage = () => {
   const data = selectedLanguage === "en" ? engData : cnData;
 
   return (
+
+    <>
     <div className="home">
-      <div className="section2">
+      <section className="section2" aria-label="Image Carousel Section">
+
         {carouselImages.map((image, index) => (
           <img
             key={index}
@@ -46,7 +49,7 @@ const HomePage = () => {
             }}
           />
         ))}
-        <div className="carousel-buttons">
+        <div className="carousel-buttons" aria-label="Carousel Buttons">
           {carouselImages.map((_, index) => (
             <button
               key={index}
@@ -57,11 +60,10 @@ const HomePage = () => {
             />
           ))}
         </div>
-      </div>
-      {/* _____________________________________________________________ */}
+      </section>
 
       <div className="container">
-        <div className="section3">
+        <section className="section3" aria-label="Our Services Section">
           <h2>Our Services</h2>
           <ul>
             {data.servicesData.slice(0, 9).map((service, index) => (
@@ -87,13 +89,12 @@ const HomePage = () => {
                 ? engData.ourPhysiciansHeading
                 : cnData.ourPhysiciansHeading}
             </h2>
-
             <ul>
               <li>
                 <a href="/physicians/james-chang">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
-                    alt="James Chang"
+                    alt="James Chang, M.D., FACR"
                   />
                   <h3>James Chang, M.D., FACR</h3>
                 </a>
@@ -102,7 +103,7 @@ const HomePage = () => {
                 <a href="/physicians/calvin-lo">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
-                    alt="James Chang"
+                    alt="Calvin Lo, M.D."
                   />
                   <h3>Calvin Lo, M.D.</h3>
                 </a>
@@ -111,7 +112,7 @@ const HomePage = () => {
                 <a href="/physicians/heather-osbourne">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
-                    alt="James Chang"
+                    alt="Heather Osbourne, M.D."
                   />
                   <h3>Heather L. Osborne, M.D.</h3>
                 </a>
@@ -120,7 +121,7 @@ const HomePage = () => {
                 <a href="/physicians/pouneh-fallahi">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
-                    alt="James Chang"
+                    alt="Pouneh Fallahi, M.D. MPH"
                   />
                   <h3>Pouneh Fallahi, M.D. MPH</h3>
                 </a>
@@ -129,7 +130,7 @@ const HomePage = () => {
                 <a href="/physicians/sabrina-pieroni">
                   <img
                     src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
-                    alt="James Chang"
+                    alt="Sabrina Pieroni, M.D."
                   />
                   <h3>Sabrina Pieroni, M.D.</h3>
                 </a>
@@ -138,7 +139,7 @@ const HomePage = () => {
                 <a href="/physicians/robert-lautin">
                   <img
                     src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
-                    alt="James Chang"
+                    alt="Robert F. Lautin, M.D."
                   />
                   <h3>Robert F. Lautin, M.D.</h3>
                 </a>
@@ -150,38 +151,41 @@ const HomePage = () => {
                 ? engData.showMore
                 : cnData.showMore}{" "}
             </a>
-          </div>
+          </section>
         </div>
-        {/* ________________________________________________________________________ */}
 
         <div className="container">
-          <div class="contact-section">
+          <section class="contact-section" aria-label="Contact Us Section">
             <h2>
               {selectedLanguage === "en"
                 ? engData.contactUsHeading
                 : cnData.contactUsHeading}
             </h2>
 
-            <div class="contact-info">
+
+            <div className="contact-info" aria-label="Address">
               <p>CP Advanced Imaging</p>
               <p>155 Canal Street</p>
               <p>New York, NY 10013</p>
             </div>
 
-            <GoogleMapComponent></GoogleMapComponent>
+            <GoogleMapComponent aria-label="Interactive Map of CP Advanced Imaging Location" />
 
-            <div class="contact-details">
-              <div>
+
+            <div className="contact-details" aria-label="Contact Details">
+              <div aria-label="General Information">
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.generalInformationHeading
                     : cnData.generalInformationHeading}
                 </h3>
+
                 <p>Tel: (212) 219-9135</p>
                 <p>Fax: (212) 219-9291</p>
               </div>
 
-              <div>
+
+              <div aria-label="MRI">
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.mriHeading
@@ -191,23 +195,29 @@ const HomePage = () => {
                 <p>Fax: (646) 898-0691</p>
               </div>
 
-              <div>
+              <div aria-label="CT & PET/CT">
                 <h3>CT & PET/CT</h3>
                 <p>Tel: (646) 898-0660</p>
                 <p>Fax: (646) 898-0695</p>
               </div>
 
-              <div>
+
+
+              <div aria-label="All Other Exams">
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.allOtherExamsHeading
                     : cnData.allOtherExamsHeading}
                 </h3>
+
                 <p>Tel: (212) 431-9010</p>
                 <p>Fax: (646) 898-0690</p>
               </div>
 
-              <div>
+
+              <div aria-label="Billing Services">
+                <h3>Billing Services</h3>
+              <div aria-label="Billing Services">
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.billingServicesHeading
@@ -217,7 +227,7 @@ const HomePage = () => {
                 <p>Fax: (212) 431-4253</p>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
