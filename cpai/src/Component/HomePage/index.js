@@ -9,7 +9,7 @@ import engData from "./engData";
 import cnData from "./cnData";
 
 const HomePage = () => {
-  const carouselImages = [image2,image2];
+  const carouselImages = [image2, image2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -158,9 +158,7 @@ const HomePage = () => {
           </div>
           <div className="description">
             <h3>Welcome to</h3>
-            <h1>
-              CP Advanced Imaging
-            </h1>
+            <h1>CP Advanced Imaging</h1>
           </div>
         </section>
 
@@ -205,7 +203,10 @@ const HomePage = () => {
                     {selectedLanguage === "en" ? "Stop" : "停止"}
                   </button>
                 ) : (
-                  <button onClick={handlePhysiciansSpeak} aria-label="Text to speech">
+                  <button
+                    onClick={handlePhysiciansSpeak}
+                    aria-label="Text to speech"
+                  >
                     {selectedLanguage === "en" ? "Read Physicians" : "阅读医生"}
                   </button>
                 )}
@@ -266,7 +267,7 @@ const HomePage = () => {
                   </li>
                 </ul>
 
-                <a href="/physicians">
+                <a href="/physicians" className="show-more-link">
                   {" "}
                   {selectedLanguage === "en"
                     ? engData.showMore
