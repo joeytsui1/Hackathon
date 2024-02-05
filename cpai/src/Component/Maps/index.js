@@ -1,5 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import { GoogleMap, Marker, LoadScript, AdvancedMarker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  LoadScript,
+  AdvancedMarker,
+} from "@react-google-maps/api";
 
 const GoogleMapComponent = () => {
   const containerStyle = {
@@ -23,6 +28,7 @@ const GoogleMapComponent = () => {
     icon: {
       url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
     },
+    alt: "Marker at CP Advanced Imaging, 155 Canal Street",
   };
 
   const mapRef = useRef(null);
@@ -37,6 +43,18 @@ const GoogleMapComponent = () => {
     <LoadScript
       googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
       scriptSrc={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&v=weekly&callback=initMap`}
+      async
+      onLoad={() => {
+        // Announce the presence of the map to screen readers
+        const mapElement = document.querySelector(
+          '[aria-label="Location of CP Advanced Imaging at 155 Canal Street"]'
+        );
+        if (mapElement) {
+          mapElement.setAttribute("role", "application");
+          mapElement.setAttribute("tabindex", "0");
+          mapElement.focus();
+        }
+      }}
     >
       <GoogleMap
         mapContainerStyle={containerStyle}
@@ -44,6 +62,7 @@ const GoogleMapComponent = () => {
         zoom={19} // Adjust the zoom level as needed
         options={mapOptions}
         onLoad={(map) => {}}
+        aria-label="Location of CP Advanced Imaging at 155 Canal Street"
       >
         <Marker {...markerOptions} />
       </GoogleMap>

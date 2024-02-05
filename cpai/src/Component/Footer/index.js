@@ -3,9 +3,9 @@ import "./index.css";
 const Footer = () => {
   return (
     <>
-      <div className="footer-container">
-        <div className="footer-section">
-          <div>
+      <footer className="footer-container" aria-label="Footer">
+        <section className="footer-section">
+          <section aria-label="Quick Links">
             <h3>QUICK LINKS</h3>
             <ul>
               <li>
@@ -18,29 +18,44 @@ const Footer = () => {
                 <a href="#">Physicians</a>
               </li>
             </ul>
-          </div>
+          </section>
 
-          <div>
+          <section aria-label="Accreditations">
             <h3>ACCREDITATIONS</h3>
-            <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/acr.jpg"></img>
-            <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/wisely.jpg    "></img>
-            <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/gently.jpg"></img>
-          </div>
+            <img
+              src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/acr.jpg"
+              alt="ACR Accreditation"
+            ></img>
+            <img
+              src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/wisely.jpg"
+              alt="Wisely Accreditation"
+            ></img>
+            <img
+              src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/gently.jpg"
+              alt="Gently Accreditation"
+            ></img>
+          </section>
 
-          <div className="logo">
-            <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/cp-logo-est-1978.jpg"></img>
-          </div>
-        </div>
+          <section className="logo" aria-label="Company Logo">
+            <img
+              src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/cp-logo-est-1978.jpg"
+              alt="CP Advanced Imaging Logo"
+            ></img>
+          </section>
+        </section>
         <div className="container">
-          <div className="trademark-section">
+          <section
+            className="trademark-section"
+            aria-label="Copyright Information"
+          >
             <p> © 2024 CP Advanced Imaging, P.C.</p>
             <div className="trademark-links">
               <a href="#">Privacy Policy</a>
-              <a href="#">Term of Use</a>
+              <a href="#">Terms of Use</a>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </footer>
     </>
   );
 };

@@ -2,7 +2,6 @@ import "./index.css";
 import React from "react";
 import { useParams } from "react-router-dom";
 
-
 const DoctorPage = () => {
   const doctors = {
     "james-chang": {
@@ -174,16 +173,15 @@ const DoctorPage = () => {
   }
   return (
     <>
-      <div className="container">
-        <div className="doctor-page">
-
-          <div className="doctor-info">
+      <main className="container">
+        <section className="doctor-page">
+          <div className="doctor-info" aria-label="Doctor Info">
             <img
               className="doctor-image"
               src={doctor.imageUrl}
               alt={doctor.title}
             />
-            <div className="doctor-text">
+            <div className="doctor-text" aria-label="Doctor Heading">
               <h2>{doctor.title}</h2>
               <p>{doctor.description}</p>
               <ul>
@@ -193,8 +191,8 @@ const DoctorPage = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 };

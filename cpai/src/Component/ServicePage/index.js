@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import serviceObj from "./data";
 import chineseServiceObj from "./chineseData";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
+
 const ServicePage = () => {
   const { name } = useParams();
   const { selectedLanguage } = useLanguage();
@@ -52,13 +53,18 @@ const ServicePage = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="service-page-container">
-          <div className="service-details" key={name}>
+      <main className="container">
+        <section className="service-page-container">
+          <div
+            className="service-details"
+            key={name}
+            aria-label={`Service Details for ${service.title}`}
+          >
             <img
               className="service-image"
               src={service.imageUrl}
               alt={service.title}
+              aria-label={`${service.title} Image`}
             />
             <div className="service-info">
               <h2>{service.title}</h2>
@@ -84,9 +90,14 @@ const ServicePage = () => {
             )}
             <h3>Expectation:</h3>
             {service.expectation.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <ol>
+                {service.expectation.map((paragraph, index) => (
+                  <li key={index}>{paragraph}</li>
+                ))}
+              </ol>
             ))}
           </div>
+
         </div>
         {isServiceSpeaking ? (
         <button onClick={handleStop}>Stop</button>
@@ -96,9 +107,12 @@ const ServicePage = () => {
         </button>
       )}
       </div>
+
+        </section>
+      </main>
+
     </>
   );
 };
 
 export default ServicePage;
-

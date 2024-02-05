@@ -36,3 +36,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dark {
+  color: white;
+}
+a{
+  color: black;
+}
+
+.dark a {
+  color: white;
+}
