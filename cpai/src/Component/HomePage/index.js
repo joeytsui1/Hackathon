@@ -327,7 +327,6 @@ const HomePage = () => {
               </div>
 
               <div aria-label="Billing Services">
-                <h3>Billing Services</h3>
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.billingServicesHeading
