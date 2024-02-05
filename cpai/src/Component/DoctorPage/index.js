@@ -181,7 +181,7 @@ const DoctorPage = () => {
               src={doctor.imageUrl}
               alt={doctor.title}
             />
-            <div className="doctor-text" aria-label="Doctor Heading">
+            <article className="doctor-text" aria-label="Doctor Heading">
               <h2>{doctor.title}</h2>
               <p>{doctor.description}</p>
               <ul>
@@ -189,7 +189,7 @@ const DoctorPage = () => {
                   <li key={index}>{achievement}</li>
                 ))}
               </ul>
-            </div>
+            </article>
           </div>
         </section>
       </main>
