@@ -1,7 +1,13 @@
 import "./index.css";
 import DarkModeToggle from "../DarkModeToggle";
-
+import LanguageSelector from "../LanguageSwitcher";
+import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 const NavBar = () => {
+  const { selectedLanguage, changeLanguage } = useLanguage();
+
+  const handleLanguageChange = (language) => {
+    changeLanguage(language);
+  };
   return (
     <>
       <div className="section1">
@@ -12,7 +18,9 @@ const NavBar = () => {
 
           <div className="navlink">
             <ul>
-              <DarkModeToggle />
+              <LanguageSelector
+                onChange={handleLanguageChange}
+              ></LanguageSelector>
               <li className="link">
                 <a href="/">Home</a>
               </li>
@@ -28,6 +36,7 @@ const NavBar = () => {
               <li className="link">
                 <a href="/contact">Contact</a>
               </li>
+              <DarkModeToggle />
             </ul>
           </div>
         </nav>
@@ -36,4 +45,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default NavBar;

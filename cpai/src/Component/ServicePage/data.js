@@ -312,6 +312,7 @@ const serviceObj = {
       "The biopsy site may be sore and tender for one to two days. You may take nonprescription pain medicine, such as acetaminophen, to relieve any discomfort.",
     ],
   },
+  
 };
 
 export default serviceObj;
