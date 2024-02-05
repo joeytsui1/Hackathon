@@ -130,6 +130,12 @@
   color: #dddada;
   /* Set the color of the description */
 }
+a{
+  color: black;
+}
+.dark a{
+  color: white  ;
+}
 
 @media (max-width: 1200px) {
   .section3 li {

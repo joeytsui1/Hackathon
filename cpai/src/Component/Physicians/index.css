@@ -48,13 +48,23 @@
 .physician-section2 li h3 {
   margin-top: 10px;
   font-size: 1.2em;
-  /* color: #333; */
+  color: black;
 }
+.dark .physician-section2 li h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: white;
+}
+
+
 
 .physician-section2 li p {
-  /* color: #666; Set the color of the description */
+  color: #666;
 }
 
+.dark .physician-section2 li p {
+  color: white;
+}
 @media (max-width: 1200px) {
   .physician-section2 li {
     flex: 0 0 calc(50% - 20px); /* Two items in a row for screens up to 768px */

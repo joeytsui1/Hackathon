@@ -41,14 +41,14 @@ const Services = () => {
     setIsServicesSpeaking(false);
   };
 
-  const generateServicesText = () => {
-    const servicesText = data.servicesData.map(service => `${service.title}. ${service.description}`).join(" ");
-    return servicesText;
-  };
+  // const generateServicesText = () => {
+  //   const servicesText = data.servicesData.map(service => `${service.title}. ${service.description}`).join(" ");
+  //   return servicesText;
+  // };
 
-  useEffect(() => {
-    setServiceToSpeak(generateServicesText());
-  }, [selectedLanguage]);
+  // useEffect(() => {
+  //   setServiceToSpeak(generateServicesText());
+  // }, [selectedLanguage]);
 
     return (
       <>
