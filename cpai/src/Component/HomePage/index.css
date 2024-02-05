@@ -1,3 +1,5 @@
+
+
 .section2 {
   max-width: 100%;
   width: 100%;
@@ -6,6 +8,18 @@
   overflow: hidden;
   position: relative; /* Ensure position relative is set */
 
+}
+
+.dark .section2 {
+  background-color: #333;
+  color: white;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  position: relative;
+      /* Ensure position relative is set */
 }
 
 .section2 img {
@@ -46,6 +60,16 @@
   opacity: 1;
 }
 /* Section 3 - Services */
+
+.dark .section3 {
+    background-color: #333;
+      color: white;
+      margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
 
 .section3{
     margin: 50px 0 ;
@@ -92,8 +116,19 @@
   color: #333;
 }
 
+.dark .section3 li h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
 .section3 li p {
   color: #666; /* Set the color of the description */
+}
+
+.dark .section3 li p {
+  color: #dddada;
+  /* Set the color of the description */
 }
 
 @media (max-width: 1200px) {
@@ -111,6 +146,16 @@
 }
 
 /* Section 4 */
+
+.dark .contact-section {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 100px 0;
+  background-color: #333;
+  color: white;
+}
 
 .contact-section {
     display: flex;
@@ -192,6 +237,16 @@
     align-items: center;
 }
 
+.dark .physician-section {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
 .physician-section h2{
     font-size: 45px;
     font-weight: 800;
@@ -229,8 +284,19 @@
   color: #333;
 }
 
+.dark .physician-section li h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
 .physician-section li p {
   color: #666; /* Set the color of the description */
+}
+
+.dark .physician-section li p {
+  color: #dddada;
+  /* Set the color of the description */
 }
 
 @media (max-width: 1200px) {
@@ -245,4 +311,9 @@
     flex: 0 0 calc(100% - 20px); /* One item in a row for screens up to 480px */
     width: calc(100% - 20px);
   }
+}
+
+
+.dark .show-more-link {
+  color: white;
 }

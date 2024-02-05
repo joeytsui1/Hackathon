@@ -24,7 +24,7 @@ const HomePage = () => {
   }, [currentIndex, carouselImages.length]);
 
   return (
-    <>
+    <div className="home">
       <div className="section2">
         {carouselImages.map((image, index) => (
           <img
@@ -179,7 +179,7 @@ const HomePage = () => {
               </a>
             </li>
           </ul>
-          <a href="/services"> Show More </a>
+          <a className="show-more-link" href="/services"> Show More </a>
         </div>
         {/* __________________________________________________________________________________________ */}
 
@@ -293,7 +293,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
