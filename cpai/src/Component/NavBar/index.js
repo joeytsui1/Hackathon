@@ -1,36 +1,49 @@
-import "./index.css"
+import "./index.css";
 const NavBar = () => {
   return (
     <>
-      <div className="section1">
-        <nav className="container">
+      <section className="section1">
+        <nav className="container" aria-label="Main Navigation">
           <div className="logo">
-            <img src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/cp-logo-est-1978.jpg"></img>
+            <img
+              src="https://cpadvancedimaging.com/wp-content/themes/cpai/images/cp-logo-est-1978.jpg"
+              alt="CP Advanced Imaging Logo"
+            ></img>
           </div>
 
-          <div className="navlink">
+          <div className="navlink" aria-label="Nav Links">
             <ul>
               <li className="link">
-                <a href="/">Home</a>
+                <a href="/" role="button">
+                  Home
+                </a>
               </li>
               <li className="link">
-                <a href="/about">About</a>
+                <a href="/about" role="button">
+                  About
+                </a>
               </li>
               <li className="link">
-                <a href="/services">Services</a>
+                <a href="/services" role="button">
+                  Services
+                </a>
               </li>
               <li className="link">
-                <a href="/physicians">Physicians</a>
+                <a href="/physicians" role="button">
+                  Physicians
+                </a>
               </li>
               <li className="link">
-                <a href="/contact">Contact</a>
+                <a href="/contact" role="button">
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
         </nav>
-      </div>
+      </section>
     </>
   );
 };
 
-export default NavBar
+export default NavBar;

@@ -214,7 +214,10 @@ const HomePage = () => {
               </a>
             </li>
           </ul>
-          <a href="/services" aria-label="More Services"> Show More </a>
+          <a href="/services" aria-label="More Services" role="button">
+            {" "}
+            Show More{" "}
+          </a>
         </section>
 
         <div className="container">

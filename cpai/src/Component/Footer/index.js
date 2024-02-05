@@ -50,12 +50,8 @@ const Footer = () => {
           >
             <p> © 2024 CP Advanced Imaging, P.C.</p>
             <div className="trademark-links">
-              <a href="#">
-                Privacy Policy
-              </a>
-              <a href="#">
-                Terms of Use
-              </a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Use</a>
             </div>
           </section>
         </div>

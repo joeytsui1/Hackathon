@@ -8,8 +8,14 @@ const Services = () => {
           <h1>Our Services</h1>
           <ul>
             <li>
-              <a href="/services/digital-x-ray">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/11/chestxrayrevised-285x300.jpg"></img>
+              <a
+                href="/services/digital-x-ray"
+                aria-label="Digital X-Ray Service"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2012/11/chestxrayrevised-285x300.jpg"
+                  alt="Digital X-ray"
+                ></img>
                 <h3>Digital X-Ray</h3>
                 <p>
                   Imaging with x-rays involves exposing a part of the body to a
@@ -21,8 +27,11 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/ultrasound">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/SONO-CAROTID.jpg"></img>
+              <a href="/services/ultrasound" aria-label="Ultrasound Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/SONO-CAROTID.jpg"
+                  alt="Ultrasound"
+                ></img>
                 <h3>Ultrasound</h3>
                 <p>
                   Ultrasound scanning, also called “ultrasound imaging” or
@@ -33,8 +42,14 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/digital-mammogram">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/Mammo-Breast-Right-218x300.jpg"></img>
+              <a
+                href="/services/digital-mammogram"
+                aria-label="Digital Mammogram"
+              >
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/Mammo-Breast-Right-218x300.jpg"
+                  alt="Digital Mammogram"
+                ></img>
                 <h3>Digital Mammography</h3>
                 <p>
                   Mammography is a low-dose x-ray examination of the breast. A
@@ -45,8 +60,11 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/fluoroscopy">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/stomach-300x213.jpg"></img>
+              <a href="/services/fluoroscopy" aria-label="Fluoroscopy Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/stomach-300x213.jpg"
+                  alt="Fluoroscopy"
+                ></img>
                 <h3>Fluoroscopy</h3>
                 <p>
                   Fluoroscopy is a special x-ray technique that makes it
@@ -57,8 +75,14 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/thyroid-biopsy">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2013/06/Thyroid-biopsy-300x194.png"></img>
+              <a
+                href="/services/thyroid-biopsy"
+                aria-label="Thyroid Biopsy Service"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2013/06/Thyroid-biopsy-300x194.png"
+                  alt="Thyroid Biopsy"
+                ></img>
                 <h3>Thyroid Biopsy</h3>
                 <p>
                   During a fine needle aspiration biopsy of the thyroid, a small
@@ -70,8 +94,14 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/bone-densitometry">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/dexa.jpg"></img>
+              <a
+                href="/services/bone-densitometry"
+                aria-label="Bone Densitometry Service"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/dexa.jpg"
+                  alt="Bone Densitometry"
+                ></img>
                 <h3>Bone Densitometry</h3>
                 <p>
                   Bone density scanning, also called dual-energy x-ray
@@ -83,8 +113,11 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/ct-scan">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/CT-ABDOMEN-sag.Ser6_.Img48-300x199.jpg"></img>
+              <a href="/services/ct-scan" aria-label="CT Scan Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/CT-ABDOMEN-sag.Ser6_.Img48-300x199.jpg"
+                  alt="CT Scan"
+                ></img>
                 <h3>CT Scan</h3>
                 <p>
                   A Computed Tomography or CT scan is an imaging test that
@@ -97,8 +130,11 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/pet-ct">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/PET-CORONAL-image-2-188x300.jpg"></img>
+              <a href="/services/pet-ct" aria-label="Pet CT Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/04/PET-CORONAL-image-2-188x300.jpg"
+                  alt="Pet CT"
+                ></img>
                 <h3>PET/CT</h3>
                 <p>
                   PET/CT is an advanced imaging test that offers information on
@@ -111,8 +147,11 @@ const Services = () => {
               </a>
             </li>
             <li>
-              <a href="/services/mri">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrbrainrevised.Ser12.jpg"></img>
+              <a href="/services/mri" aria-label="MRI Service">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrbrainrevised.Ser12.jpg"
+                  alt="MRI"
+                ></img>
                 <h3>MRI</h3>
                 <p>
                   Magnetic Resonance Imaging provides highly detailed pictures
@@ -126,8 +165,11 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/mr-angiogram">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrachestrevised.jpg"></img>
+              <a href="/services/mr-angiogram" aria-label="MR Angiogram">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/mrachestrevised.jpg"
+                  alt="MR Angiogram"
+                ></img>
                 <h3>MR Angiogram</h3>
                 <p>
                   Magnetic Resonance Angiography (MRA) provides highly detailed
@@ -139,8 +181,11 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/breast-mri">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/MRI-BREAST-280x300.jpg"></img>
+              <a href="/services/breast-mri" aria-label="Breast MRI">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/MRI-BREAST-280x300.jpg"
+                  alt="Breast MRI"
+                ></img>
                 <h3>Breast MRI</h3>
                 <p>
                   Breast Magnetic Resonance Imaging provides highly detailed
@@ -152,8 +197,14 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/liver-elastography">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2016/11/shear-wave-velocity-measurement-at-8cm-depth.jpg"></img>
+              <a
+                href="/services/liver-elastography"
+                aria-label="Liver Elastography"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2016/11/shear-wave-velocity-measurement-at-8cm-depth.jpg"
+                  alt="Liver Elastography"
+                ></img>
                 <h3>Liver Elastography</h3>
                 <p>
                   Ultrasound-based liver elastography is a noninvasive test to
@@ -163,8 +214,14 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/ct-lung-screening">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2016/11/ct-lung-screening-picture-updated-113016.jpg"></img>
+              <a
+                href="/services/ct-lung-screening"
+                aria-label="CT Lung Screening"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2016/11/ct-lung-screening-picture-updated-113016.jpg"
+                  alt="CT Lung Screening"
+                ></img>
                 <h3>Low Dose CT Lung Screening</h3>
                 <p>
                   CT lung screening is a CT scan of the lungs using a low
@@ -174,8 +231,14 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/ct-virtual-colonoscopy">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/ctcolonrevised.Ser1004.jpg"></img>
+              <a
+                href="/services/ct-virtual-colonoscopy"
+                aria-label="CT Virtual Colonoscopy"
+              >
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/10/ctcolonrevised.Ser1004.jpg"
+                  alt="CT Virtual Colonoscopy"
+                ></img>
                 <h3>CT Virtual Colonoscopy</h3>
                 <p>
                   CT colonoscopy, also known as virtual colonoscopy, is a
@@ -187,8 +250,11 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/ct-angiogram">
-                <img src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/CTA-Abdomen-2-276x300.jpg"></img>
+              <a href="/services/ct-angiogram" aria-label="CT Angiogram">
+                <img
+                  src="http://cpadvancedimaging.com/wp-content/uploads/2012/09/CTA-Abdomen-2-276x300.jpg"
+                  alt="CT Angiogram"
+                ></img>
                 <h3>CT Angiogram</h3>
                 <p>
                   A Computed Tomography Angiogram or CTA scan is an imaging test
@@ -199,8 +265,14 @@ const Services = () => {
             </li>
 
             <li>
-              <a href="/services/3d-mammography-breast-tomosythesis">
-                <img src="https://cpadvancedimaging.com/wp-content/uploads/2016/11/breast-tomo-picture-updated-113016.jpg"></img>
+              <a
+                href="/services/3d-mammography-breast-tomosythesis"
+                aria-label="3D Mammography Breast Tomosynthesis"
+              >
+                <img
+                  src="https://cpadvancedimaging.com/wp-content/uploads/2016/11/breast-tomo-picture-updated-113016.jpg"
+                  alt="3D Mammography Breast Tomosynthesis"
+                ></img>
                 <h3>3D Mammography Breast Tomosynthesis</h3>
                 <p>
                   Breast tomosynthesis or 3D mammography is an FDA approved
