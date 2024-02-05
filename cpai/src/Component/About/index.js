@@ -90,7 +90,7 @@ const About = () => {
             <GoogleMapComponent aria-label="Interactive Map of CP Advanced Imaging Location" />
 
             <div className="contact-details">
-              <div>
+            <div aria-label="General Information">
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.generalInformationHeading
