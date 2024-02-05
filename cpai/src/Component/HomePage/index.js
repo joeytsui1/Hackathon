@@ -157,7 +157,8 @@ const HomePage = () => {
             ))}
           </div>
           <div className="description">
-            <h3>Welcome to</h3>
+            <h3>{selectedLanguage === "en" ? "Welcome to" : "欢迎来到"}</h3>
+
             <h1>CP Advanced Imaging</h1>
           </div>
         </section>

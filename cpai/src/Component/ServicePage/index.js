@@ -65,20 +65,23 @@ const ServicePage = () => {
               alt={service.title}
               aria-label={`${service.title} Image`}
             />
-            {isServiceSpeaking ? (
-              <button onClick={handleStop} aria-label="Stop text to speech">
-                Stop
-              </button>
-            ) : (
-              <button onClick={handleServiceSpeak} aria-label="Text to speech">
-                {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
-              </button>
-            )}
             <div className="service-info">
               <h2>{service.title}</h2>
               {service.description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+              {isServiceSpeaking ? (
+                <button onClick={handleStop} aria-label="Stop text to speech">
+                  Stop
+                </button>
+              ) : (
+                <button
+                  onClick={handleServiceSpeak}
+                  aria-label="Text to speech"
+                >
+                  {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
+                </button>
+              )}
             </div>
           </div>
 
