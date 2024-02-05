@@ -9,7 +9,7 @@ import engData from "./engData";
 import cnData from "./cnData";
 
 const HomePage = () => {
-  const carouselImages = [image1, image2];
+  const carouselImages = [image2,image2];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,7 +19,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
-    }, 15000);
+    }, 20000);
     return () => clearInterval(interval);
   }, [currentIndex, carouselImages.length]);
 
@@ -155,6 +155,12 @@ const HomePage = () => {
                 onClick={() => handleButtonClick(index)}
               />
             ))}
+          </div>
+          <div className="description">
+            <h3>Welcome to</h3>
+            <h1>
+              CP Advanced Imaging
+            </h1>
           </div>
         </section>
 

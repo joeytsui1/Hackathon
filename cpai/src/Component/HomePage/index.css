@@ -10,6 +10,25 @@
 
 }
 
+.section2 .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  position: absolute;
+  letter-spacing: 2px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: rgb(241, 242, 244);
+}
+
+.section2 .description h1 {
+  font-size: 70px;
+}
+
 .dark .section2 {
   background-color: #333;
   color: white;
