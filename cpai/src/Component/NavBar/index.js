@@ -1,5 +1,14 @@
 import "./index.css";
+import DarkModeToggle from "../DarkModeToggle";
+import LanguageSelector from "../LanguageSwitcher";
+import { useLanguage } from "../LanguageSwitcher/LanguageContext";
+
 const NavBar = () => {
+  const { selectedLanguage, changeLanguage } = useLanguage();
+
+  const handleLanguageChange = (language) => {
+    changeLanguage(language);
+  };
   return (
     <>
       <section className="section1">
@@ -13,6 +22,9 @@ const NavBar = () => {
 
           <div className="navlink" aria-label="Nav Links">
             <ul>
+              <LanguageSelector
+                onChange={handleLanguageChange}
+              ></LanguageSelector>
               <li className="link">
                 <a href="/">
                   Home
@@ -38,6 +50,7 @@ const NavBar = () => {
                   Contact
                 </a>
               </li>
+              <DarkModeToggle />
             </ul>
           </div>
         </nav>

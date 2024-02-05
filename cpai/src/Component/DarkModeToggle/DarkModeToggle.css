@@ -1,0 +1,82 @@
+body.dark {
+    --color-background: #1f2023;
+    --color-foreground: #efefef;
+
+    --image-grayscale: 50%;
+    --image-opacity: 90%;
+}
+
+img,
+video {
+    filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+}
+
+/* DarkModeToggle.css */
+
+.dark-mode-toggle {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-left: 20px;
+    /* Add space on the left */
+}
+
+.dark-mode-toggle button {
+    appearance: none;
+    width: 60px;
+    height: 34px;
+    background: #ccc;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 17px;
+    padding: 2px;
+    position: relative;
+    transition: background 0.3s ease; /* Add transition for smooth background color change */
+}
+
+.dark-mode-toggle .slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    transition: transform 0.3s ease; /* Add transition for smooth position change */
+    z-index: 1;
+}
+
+.dark-mode-toggle.dark-mode .slider {
+    transform: translateX(100%);
+}
+
+.dark-mode-toggle.dark-mode button {
+    background: #999;
+}
+
+
+.dark-mode-toggle button:focus:not(:focus-visible) {
+    outline: none;
+    /* Remove outline for non-keyboard focus */
+}
+
+.dark-mode-toggle button:focus-visible {
+    outline: 2px solid #ffffff;
+    /* White outline */
+    outline-offset: 2px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
