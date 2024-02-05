@@ -11,7 +11,6 @@ const ServicePage = () => {
   const data = selectedLanguage === "en" ? serviceObj : chineseServiceObj;
   const service = data[name];
 
-
   const [serviceTextToSpeak, setServiceTextToSpeak] = useState("");
   const [isServiceSpeaking, setIsServiceSpeaking] = useState(false);
 
@@ -66,6 +65,15 @@ const ServicePage = () => {
               alt={service.title}
               aria-label={`${service.title} Image`}
             />
+            {isServiceSpeaking ? (
+              <button onClick={handleStop} aria-label="Stop text to speech">
+                Stop
+              </button>
+            ) : (
+              <button onClick={handleServiceSpeak} aria-label="Text to speech">
+                {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
+              </button>
+            )}
             <div className="service-info">
               <h2>{service.title}</h2>
               {service.description.map((paragraph, index) => (
@@ -97,19 +105,8 @@ const ServicePage = () => {
               </ol>
             ))}
           </div>
-
-              {isServiceSpeaking ? (
-              <button onClick={handleStop}>Stop</button>
-            ) : (
-              <button onClick={handleServiceSpeak}>
-                {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
-              </button>
-            )}
-
-
         </section>
       </main>
-
     </>
   );
 };
