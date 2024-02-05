@@ -60,9 +60,13 @@ const NavBar = () => {
                 </a>
               </li>
               <li className="link">
-                {translations.physicians[selectedLanguage]}
+                <a href="/physicians">
+                  {translations.physicians[selectedLanguage]}
+                </a>
               </li>
-              <li className="link">{translations.contact[selectedLanguage]}</li>
+              <li className="link">
+                <a href="/contact">{translations.contact[selectedLanguage]}</a>
+              </li>
               <DarkModeToggle />
             </ul>
           </div>
