@@ -38,7 +38,7 @@ const About = () => {
     <>
       <main className="container">
         <section className="about-section">
-          <h1>
+          <h1 className="about-us-header">
             {selectedLanguage === "en"
               ? engData.ourCompanyHeading
               : cnData.ourCompanyHeading}

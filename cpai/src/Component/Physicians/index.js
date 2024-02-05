@@ -1,11 +1,14 @@
 import "./index.css";
-
+import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 const Physicians = () => {
+  const {selectedLanguage} = useLanguage()
   return (
     <>
       <main className="container">
         <section className="physician-section2">
-          <h2>Our Physicians</h2>
+          <h2>
+            {selectedLanguage === "en"? "Our Physicians": "我们的医生"}
+          </h2>
           <ul>
             <li>
               <a href="/physicians/james-chang">

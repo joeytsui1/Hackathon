@@ -164,7 +164,7 @@ const HomePage = () => {
 
         <div className="container">
           <section className="section3" aria-label="Our Services Section">
-            <h2>Our Services</h2>
+            <h2>{data.services}</h2>
             {isServicesSpeaking ? (
               <button onClick={handleStop} aria-label="Stop text to speech">
                 {selectedLanguage === "en" ? "Stop" : "停止"}

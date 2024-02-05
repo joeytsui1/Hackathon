@@ -52,7 +52,7 @@ const Services = () => {
     <>
       <div className="container">
         <div className="service-section">
-          <h1>Our Services</h1>
+          <h1>{data.services}</h1>
           {isServicesSpeaking ? (
             <button onClick={handleStop} aria-label="Stop text to speech">
               {selectedLanguage === "en" ? "Stop" : "停止"}
