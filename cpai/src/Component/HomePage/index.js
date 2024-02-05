@@ -64,7 +64,7 @@ const HomePage = () => {
         <div className="section3">
           <h2>Our Services</h2>
           <ul>
-            {data.servicesData.map((service, index) => (
+            {data.servicesData.slice(0, 9).map((service, index) => (
               <li key={index}>
                 <a href={service.link}>
                   <img src={service.image} alt={`service-${index}`} />
