@@ -16,6 +16,8 @@ video {
     position: relative;
     width: 60px;
     height: 34px;
+    margin-left: 20px;
+    /* Add space on the left */
 }
 
 .dark-mode-toggle button {
