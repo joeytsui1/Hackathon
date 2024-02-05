@@ -12,6 +12,7 @@ import ServicePage from "./Component/ServicePage";
 // import NotFoundPage from "./Component/NotFoundPage";
 
 function App() {
+  
   return (
     <>
       <NavBar></NavBar> 
