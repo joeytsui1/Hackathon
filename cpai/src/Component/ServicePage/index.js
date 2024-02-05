@@ -98,15 +98,14 @@ const ServicePage = () => {
             ))}
           </div>
 
-        </div>
-        {isServiceSpeaking ? (
-        <button onClick={handleStop}>Stop</button>
-      ) : (
-        <button onClick={handleServiceSpeak}>
-          {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
-        </button>
-      )}
-      </div>
+              {isServiceSpeaking ? (
+              <button onClick={handleStop}>Stop</button>
+            ) : (
+              <button onClick={handleServiceSpeak}>
+                {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
+              </button>
+            )}
+
 
         </section>
       </main>

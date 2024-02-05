@@ -65,15 +65,14 @@ const Services = () => {
                 </li>
               ))}
             </ul>
-            {isServicesSpeaking ? (
-          <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button> 
-          ) : (
-            <button onClick={handleServicesSpeak}>{selectedLanguage === "en" ? "Read Services" : "读取服务"}</button>
-          )} 
+              {isServicesSpeaking ? (
+            <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button> 
+            ) : (
+              <button onClick={handleServicesSpeak}>{selectedLanguage === "en" ? "Read Services" : "读取服务"}</button>
+            )} 
           </div>
 
         </div>
-      </div>
     </>
   );
 };
