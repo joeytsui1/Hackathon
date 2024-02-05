@@ -1,7 +1,7 @@
 import "./index.css";
 import image1 from "../../images/cphomeimage-fotor-20240204174922.jpg";
 import image2 from "../../images/pic2.jpeg";
-import React from "react";
+import React, { useRef } from "react";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 import { useState, useEffect } from "react";
 import GoogleMapComponent from "../Maps";
@@ -25,6 +25,104 @@ const HomePage = () => {
 
   const { selectedLanguage } = useLanguage();
   const data = selectedLanguage === "en" ? engData : cnData;
+
+  const [serviceToSpeak, setServiceToSpeak] = useState("");
+  const [isServicesSpeaking, setIsServicesSpeaking] = useState(false);
+  const [isPhysiciansSpeaking, setIsPhysiciansSpeaking] = useState(false);
+  const [physicianToSpeak, setPhysicianToSpeak] = useState("");
+  // const [contactText, setContactText] = useState("");
+  // const [isContactSpeaking, setIsContactSpeaking] = useState(false);
+
+  const speechSynthesisRef = useRef(null); // Ref to hold the speech synthesis instance
+
+  useEffect(() => {
+    const speech = speechSynthesisRef.current;
+    if (speech) {
+      window.speechSynthesis.cancel(); // Cancel the speech synthesis
+      setIsServicesSpeaking(false);
+      setIsPhysiciansSpeaking(false);
+      // setIsContactSpeaking(false);
+    }
+  }, [selectedLanguage]);
+
+
+  const handleServicesSpeak = () => {
+    handleStop();
+
+    if (serviceToSpeak) {
+      const speech = new SpeechSynthesisUtterance(serviceToSpeak);
+      speech.lang = selectedLanguage === 'cn' ? 'zh-CN' : 'en-US';
+      speechSynthesisRef.current = speech; // Store the speech synthesis instance in the ref
+      window.speechSynthesis.speak(speech);
+      setIsServicesSpeaking(true);
+    }
+  };
+
+  const handlePhysiciansSpeak = () => {
+    handleStop();
+
+    if (physicianToSpeak) {
+      const speech = new SpeechSynthesisUtterance(physicianToSpeak);
+      speech.lang = selectedLanguage === "cn" ? "zh-CN" : "en-US";
+      speechSynthesisRef.current = speech;
+      window.speechSynthesis.speak(speech);
+      setIsPhysiciansSpeaking(true);
+    }
+  };
+
+  // const handleContactSpeak = () => {
+  //   handleStop(); 
+
+  //   if (contactText) {
+  //     const speech = new SpeechSynthesisUtterance(contactText);
+  //     speech.lang = selectedLanguage === "cn" ? "zh-CN" : "en-US";
+  //     speechSynthesisRef.current = speech;
+  //     window.speechSynthesis.speak(speech);
+  //     setIsContactSpeaking(true);
+  //   }
+  // };
+
+  const handleStop = () => {
+    // Stop speech synthesis
+    window.speechSynthesis.cancel();
+    setIsServicesSpeaking(false);
+    setIsPhysiciansSpeaking(false);
+    // setIsContactSpeaking(false);
+  };
+
+
+  const generatePhysiciansText = () => {
+    // Extracting the heading text
+    const headingText = selectedLanguage === "en"
+      ? data.ourPhysiciansHeading
+      : data.ourPhysiciansHeading;
+    
+    // Extracting the physician names
+    const physicianNames = Array.from(
+      document.querySelectorAll(".physician-section h3")
+    ).map((element) => element.textContent.trim());
+
+    // Combining the heading text and physician names
+    return `${headingText}. ${physicianNames.join(". ")}`;
+  };
+  
+  const generateServicesText = () => {
+    const servicesText = data.servicesData.map(service => `${service.title}. ${service.description}`).join(" ");
+    return servicesText;
+  };
+
+  useEffect(() => {
+    setServiceToSpeak(generateServicesText());
+    setPhysicianToSpeak(generatePhysiciansText());
+  }, [selectedLanguage]);
+
+  // useEffect(() => {
+  //   // Generate text for contact information and details
+  //   const contactText = `${data.contactInfo.map((info) => info.text).join(". ")}.
+  //     ${data.contactDetails.map((detail) => `${detail.heading}. ${detail.text}`).join(". ")}`;
+  //   setContactText(contactText);
+  // }, [selectedLanguage]);
+
 
   return (
 
@@ -76,6 +174,11 @@ const HomePage = () => {
               </li>
             ))}
           </ul>
+          {isServicesSpeaking ? (
+          <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button> 
+          ) : (
+            <button onClick={handleServicesSpeak}>{selectedLanguage === "en" ? "Read Services" : "读取服务"}</button>
+          )} 
           <a className="show-more-link" href="/services">
             {selectedLanguage === "en" ? engData.showMore : cnData.showMore}
           </a>
@@ -145,6 +248,12 @@ const HomePage = () => {
                 </a>
               </li>
             </ul>
+            {isPhysiciansSpeaking ? (
+              <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button>
+            ) : (
+              <button onClick={handlePhysiciansSpeak}>{selectedLanguage === "en" ? "Read Physicians" : "阅读医生"}</button>
+            )}
+
             <a href="/physicians">
               {" "}
               {selectedLanguage === "en"
@@ -227,7 +336,16 @@ const HomePage = () => {
                 <p>Fax: (212) 431-4253</p>
               </div>
             </div>
+
+            {/* {isContactSpeaking ? (
+              <button onClick={handleStop}>{selectedLanguage === "en" ? "Stop" : "停止"}</button>
+            ) : (
+              <button onClick={handleContactSpeak}>{selectedLanguage === "en" ? "Read Contact Information" : "读取联系信息"}</button>
+            )} */}
+          </div>
+
           </section>
+
         </div>
       </div>
     </div>

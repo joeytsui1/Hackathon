@@ -4,6 +4,11 @@
   margin: 170px 0 120px 0;
 }
 
+.dark .doctor-page{
+  margin: 170px 0 120px 0;
+  color: white;
+}
+
 .doctor-info {
   width: 70%;
   display: flex;

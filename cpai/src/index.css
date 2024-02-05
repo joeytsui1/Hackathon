@@ -24,6 +24,12 @@ body.dark {
   line-height: 1.5;
   letter-spacing: .5px;
   background-color: #333;
+  color: white;
+}
+
+body.dark a {
+  color: #ffffff;
+  /* White link color in dark mode */
 }
 
 code {

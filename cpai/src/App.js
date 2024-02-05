@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./Component/HomePage";
 import NavBar from "./Component/NavBar";
@@ -12,6 +12,19 @@ import ServicePage from "./Component/ServicePage";
 // import NotFoundPage from "./Component/NotFoundPage";
 import { LanguageProvider } from "./Component/LanguageSwitcher/LanguageContext";
 function App() {
+
+  useEffect(() => {
+    const cleanupSpeechSynthesis = () => {
+      window.speechSynthesis.cancel();
+    };
+
+    window.addEventListener('beforeunload', cleanupSpeechSynthesis);
+
+    return () => {
+      window.removeEventListener('beforeunload', cleanupSpeechSynthesis);
+      cleanupSpeechSynthesis();
+    };
+  }, []);
   
   return (
     <LanguageProvider>

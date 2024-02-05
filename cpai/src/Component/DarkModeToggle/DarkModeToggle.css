@@ -32,7 +32,7 @@ video {
     border-radius: 17px;
     padding: 2px;
     position: relative;
-    transition: background 0.3s ease; /* Add transition for smooth background color change */
+    /* Ensure relative positioning for child elements */
 }
 
 .dark-mode-toggle .slider {
@@ -40,17 +40,20 @@ video {
     top: 50%;
     transform: translateY(-50%);
     left: 2px;
+    /* Adjust the left position to align with the start of the toggle button */
     cursor: pointer;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     background-color: #fff;
-    transition: transform 0.3s ease; /* Add transition for smooth position change */
+    transition: transform 0.3s ease;
     z-index: 1;
+    /* Ensure the slider is above the toggle button */
 }
 
 .dark-mode-toggle.dark-mode .slider {
-    transform: translateX(100%);
+    left: calc(100% - 32px);
+    /* Adjust the left position to align with the end of the toggle button */
 }
 
 .dark-mode-toggle.dark-mode button {
@@ -79,4 +82,3 @@ video {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-
