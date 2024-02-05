@@ -8,6 +8,7 @@ import Services from "./Component/Services";
 import Physicians from "./Component/Physicians";
 import DoctorPage from "./Component/DoctorPage";
 import ServicePage from "./Component/ServicePage";
+import ContactPage from "./Component/ContactPage"
 // import ContactPage from "./Component/ContactPage";
 // import NotFoundPage from "./Component/NotFoundPage";
 import { LanguageProvider } from "./Component/LanguageSwitcher/LanguageContext";
@@ -46,6 +47,7 @@ function App() {
               path="/physicians/:name"
               element={<DoctorPage />}
             ></Route>
+            <Route exact path="/contact" element={<ContactPage />}></Route> 
           </Routes>
         </Router>
         <Footer></Footer>
