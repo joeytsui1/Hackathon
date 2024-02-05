@@ -126,7 +126,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="home">
+      <main className="home">
         <section className="section2" aria-label="Image Carousel Section">
           {carouselImages.map((image, index) => (
             <img
@@ -167,6 +167,15 @@ const HomePage = () => {
         <div className="container">
           <section className="section3" aria-label="Our Services Section">
             <h2>Our Services</h2>
+            {isServicesSpeaking ? (
+              <button onClick={handleStop} aria-label="Stop text to speech">
+                {selectedLanguage === "en" ? "Stop" : "停止"}
+              </button>
+            ) : (
+              <button onClick={handleServicesSpeak} aria-label="Text to speech">
+                {selectedLanguage === "en" ? "Read Services" : "读取服务"}
+              </button>
+            )}
             <ul>
               {data.servicesData.slice(0, 9).map((service, index) => (
                 <li key={index}>
@@ -178,15 +187,6 @@ const HomePage = () => {
                 </li>
               ))}
             </ul>
-            {isServicesSpeaking ? (
-              <button onClick={handleStop}>
-                {selectedLanguage === "en" ? "Stop" : "停止"}
-              </button>
-            ) : (
-              <button onClick={handleServicesSpeak}>
-                {selectedLanguage === "en" ? "Read Services" : "读取服务"}
-              </button>
-            )}
             <a className="show-more-link" href="/services">
               {selectedLanguage === "en" ? engData.showMore : cnData.showMore}
             </a>
@@ -194,12 +194,21 @@ const HomePage = () => {
             {/* __________________________________________________________________________________________ */}
 
             <div className="container">
-              <div className="physician-section">
+              <section className="physician-section">
                 <h2>
                   {selectedLanguage === "en"
                     ? engData.ourPhysiciansHeading
                     : cnData.ourPhysiciansHeading}
                 </h2>
+                {isPhysiciansSpeaking ? (
+                  <button onClick={handleStop} aria-label="Stop text to speech">
+                    {selectedLanguage === "en" ? "Stop" : "停止"}
+                  </button>
+                ) : (
+                  <button onClick={handlePhysiciansSpeak} aria-label="Text to speech">
+                    {selectedLanguage === "en" ? "Read Physicians" : "阅读医生"}
+                  </button>
+                )}
                 <ul>
                   <li>
                     <a href="/physicians/james-chang">
@@ -256,15 +265,6 @@ const HomePage = () => {
                     </a>
                   </li>
                 </ul>
-                {isPhysiciansSpeaking ? (
-                  <button onClick={handleStop}>
-                    {selectedLanguage === "en" ? "Stop" : "停止"}
-                  </button>
-                ) : (
-                  <button onClick={handlePhysiciansSpeak}>
-                    {selectedLanguage === "en" ? "Read Physicians" : "阅读医生"}
-                  </button>
-                )}
 
                 <a href="/physicians">
                   {" "}
@@ -272,7 +272,7 @@ const HomePage = () => {
                     ? engData.showMore
                     : cnData.showMore}{" "}
                 </a>
-              </div>
+              </section>
             </div>
           </section>
         </div>
@@ -350,7 +350,7 @@ const HomePage = () => {
             </div>
           </section>
         </div>
-      </div>
+      </main>
     </>
   );
 };

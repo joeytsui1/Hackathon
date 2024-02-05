@@ -43,6 +43,20 @@ const About = () => {
               ? engData.ourCompanyHeading
               : cnData.ourCompanyHeading}
           </h1>
+          {isCompanyTextSpeaking ? (
+            <button onClick={handleStop} aria-label="Stop text to speech">
+              {selectedLanguage === "en" ? "Stop" : "停止"}
+            </button>
+          ) : (
+            <button
+              onClick={handleCompanyTextSpeak}
+              aria-label="Text to speech"
+            >
+              {selectedLanguage === "en"
+                ? "Read About Our Company"
+                : "读取关于我们的公司"}
+            </button>
+          )}
           <p>
             {selectedLanguage === "en"
               ? engData.ourCompanyText1
@@ -54,17 +68,6 @@ const About = () => {
               ? engData.ourCompanyText2
               : cnData.ourCompanyText2}
           </p>
-          {isCompanyTextSpeaking ? (
-            <button onClick={handleStop}>
-              {selectedLanguage === "en" ? "Stop" : "停止"}
-            </button>
-          ) : (
-            <button onClick={handleCompanyTextSpeak}>
-              {selectedLanguage === "en"
-                ? "Read About Our Company"
-                : "读取关于我们的公司"}
-            </button>
-          )}
           <div>
             <img
               src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/paboutus.jpg"
@@ -90,7 +93,7 @@ const About = () => {
             <GoogleMapComponent aria-label="Interactive Map of CP Advanced Imaging Location" />
 
             <div className="contact-details">
-            <div aria-label="General Information">
+              <div aria-label="General Information">
                 <h3>
                   {selectedLanguage === "en"
                     ? engData.generalInformationHeading
