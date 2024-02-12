@@ -45,9 +45,9 @@ const NavBar = () => {
 
           <div className="navlink" aria-label="Nav Links">
             <ul>
-              <LanguageSelector
+              {/* <LanguageSelector
                 onChange={handleLanguageChange}
-              ></LanguageSelector>
+              ></LanguageSelector> */}
               <li className="link">
                 <a href="/">{translations.home[selectedLanguage]}</a>
               </li>

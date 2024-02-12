@@ -1,5 +1,4 @@
 import "./index.css";
-import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import serviceObj from "./data";
 import chineseServiceObj from "./chineseData";
@@ -10,45 +9,6 @@ const ServicePage = () => {
   const { selectedLanguage } = useLanguage();
   const data = selectedLanguage === "en" ? serviceObj : chineseServiceObj;
   const service = data[name];
-
-  const [serviceTextToSpeak, setServiceTextToSpeak] = useState("");
-  const [isServiceSpeaking, setIsServiceSpeaking] = useState(false);
-
-  const speechSynthesisRef = useRef(null);
-
-  useEffect(() => {
-    let textToSpeak = `${service.title}. `;
-    textToSpeak += service.description.join(" ");
-    textToSpeak += " Preparation: ";
-    service.preparation.forEach((item) => {
-      if (Array.isArray(item)) {
-        textToSpeak += `${item[0]}. `;
-        textToSpeak += item.slice(1).join(" ");
-      } else {
-        textToSpeak += `${item}. `;
-      }
-    });
-    textToSpeak += " Expectation: ";
-    textToSpeak += service.expectation.join(" ");
-
-    setServiceTextToSpeak(textToSpeak);
-  }, [selectedLanguage, service]);
-
-  const handleServiceSpeak = () => {
-    handleStop();
-    if (serviceTextToSpeak) {
-      const speech = new SpeechSynthesisUtterance(serviceTextToSpeak);
-      speech.lang = selectedLanguage === "cn" ? "zh-CN" : "en-US";
-      speechSynthesisRef.current = speech;
-      window.speechSynthesis.speak(speech);
-      setIsServiceSpeaking(true);
-    }
-  };
-
-  const handleStop = () => {
-    window.speechSynthesis.cancel();
-    setIsServiceSpeaking(false);
-  };
 
   return (
     <>
@@ -70,18 +30,6 @@ const ServicePage = () => {
               {service.description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
-              {isServiceSpeaking ? (
-                <button onClick={handleStop} aria-label="Stop text to speech">
-                  Stop
-                </button>
-              ) : (
-                <button
-                  onClick={handleServiceSpeak}
-                  aria-label="Text to speech"
-                >
-                  {selectedLanguage === "en" ? "Read Service" : "朗读服务"}
-                </button>
-              )}
             </div>
           </div>
 

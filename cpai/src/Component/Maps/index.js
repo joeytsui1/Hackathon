@@ -3,7 +3,6 @@ import {
   GoogleMap,
   Marker,
   LoadScript,
-  AdvancedMarker,
 } from "@react-google-maps/api";
 
 const GoogleMapComponent = () => {
