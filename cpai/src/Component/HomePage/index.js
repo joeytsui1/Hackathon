@@ -66,7 +66,7 @@ const HomePage = () => {
             <h1>CP Advanced Imaging</h1>
           </div>
         </section>
-
+        
         <div className="container">
           <section className="section3" aria-label="Our Services Section">
             <h2>{data.services}</h2>
@@ -84,81 +84,81 @@ const HomePage = () => {
             <a className="show-more-link" href="/services">
               {selectedLanguage === "en" ? engData.showMore : cnData.showMore}
             </a>
+          </section>
+        </div>
 
-            {/* __________________________________________________________________________________________ */}
+        {/* __________________________________________________________________________________________ */}
 
-            <div className="container">
-              <section className="physician-section">
-                <h2>
-                  {selectedLanguage === "en"
-                    ? engData.ourPhysiciansHeading
-                    : cnData.ourPhysiciansHeading}
-                </h2>
-                <ul>
-                  <li>
-                    <a href="/physicians/james-chang">
-                      <img
-                        src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
-                        alt="James Chang, M.D., FACR"
-                      />
-                      <h3>James Chang, M.D., FACR</h3>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/physicians/calvin-lo">
-                      <img
-                        src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
-                        alt="Calvin Lo, M.D."
-                      />
-                      <h3>Calvin Lo, M.D.</h3>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/physicians/heather-osbourne">
-                      <img
-                        src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
-                        alt="Heather Osbourne, M.D."
-                      />
-                      <h3>Heather L. Osborne, M.D.</h3>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/physicians/pouneh-fallahi">
-                      <img
-                        src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
-                        alt="Pouneh Fallahi, M.D. MPH"
-                      />
-                      <h3>Pouneh Fallahi, M.D. MPH</h3>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/physicians/sabrina-pieroni">
-                      <img
-                        src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
-                        alt="Sabrina Pieroni, M.D."
-                      />
-                      <h3>Sabrina Pieroni, M.D.</h3>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/physicians/robert-lautin">
-                      <img
-                        src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
-                        alt="Robert F. Lautin, M.D."
-                      />
-                      <h3>Robert F. Lautin, M.D.</h3>
-                    </a>
-                  </li>
-                </ul>
-
-                <a href="/physicians" className="show-more-link">
-                  {" "}
-                  {selectedLanguage === "en"
-                    ? engData.showMore
-                    : cnData.showMore}{" "}
+        <div className="container">
+          <section className="physician-section">
+            <h2>
+              {selectedLanguage === "en"
+                ? engData.ourPhysiciansHeading
+                : cnData.ourPhysiciansHeading}
+            </h2>
+            <ul>
+              <li>
+                <a href="/physicians/james-chang">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/uploads/jchang.jpg"
+                    alt="James Chang, M.D., FACR"
+                  />
+                  <h3>James Chang, M.D., FACR</h3>
                 </a>
-              </section>
-            </div>
+              </li>
+              <li>
+                <a href="/physicians/calvin-lo">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/calvinlo.jpg"
+                    alt="Calvin Lo, M.D."
+                  />
+                  <h3>Calvin Lo, M.D.</h3>
+                </a>
+              </li>
+              <li>
+                <a href="/physicians/heather-osbourne">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/hosborne.jpg"
+                    alt="Heather Osbourne, M.D."
+                  />
+                  <h3>Heather L. Osborne, M.D.</h3>
+                </a>
+              </li>
+              <li>
+                <a href="/physicians/pouneh-fallahi">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/uploads/pfallahi.jpg"
+                    alt="Pouneh Fallahi, M.D. MPH"
+                  />
+                  <h3>Pouneh Fallahi, M.D. MPH</h3>
+                </a>
+              </li>
+              <li>
+                <a href="/physicians/sabrina-pieroni">
+                  <img
+                    src="https://cpadvancedimaging.com/wp-content/uploads/2016/08/sabrina-pieronic-website-picture-682x1024.jpg"
+                    alt="Sabrina Pieroni, M.D."
+                  />
+                  <h3>Sabrina Pieroni, M.D.</h3>
+                </a>
+              </li>
+              <li>
+                <a href="/physicians/robert-lautin">
+                  <img
+                    src="http://cpadvancedimaging.com/wp-content/themes/cpai/images/rlautin.jpg"
+                    alt="Robert F. Lautin, M.D."
+                  />
+                  <h3>Robert F. Lautin, M.D.</h3>
+                </a>
+              </li>
+            </ul>
+
+            <a href="/physicians" className="show-more-link">
+              {" "}
+              {selectedLanguage === "en"
+                ? engData.showMore
+                : cnData.showMore}{" "}
+            </a>
           </section>
         </div>
 
