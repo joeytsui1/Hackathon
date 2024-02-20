@@ -1,7 +1,6 @@
 import "./index.css";
 import { useParams } from "react-router-dom";
-import serviceObj from "./data";
-import chineseServiceObj from "./chineseData";
+import { serviceObj, chineseServiceObj } from "../../util/util";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 
 const ServicePage = () => {

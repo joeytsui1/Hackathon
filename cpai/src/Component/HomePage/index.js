@@ -1,12 +1,12 @@
 import "./index.css";
 import image1 from "../../images/cphomeimage-fotor-20240204174922.jpg";
 import image2 from "../../images/pic2.jpeg";
-import React, { useRef } from "react";
+import React from "react";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 import { useState, useEffect } from "react";
 import GoogleMapComponent from "../Maps";
-import engData from "./engData";
-import cnData from "./cnData";
+import { engData, cnData } from "../../util/util";
+
 
 const HomePage = () => {
   const carouselImages = [image2, image2];
@@ -30,7 +30,7 @@ const HomePage = () => {
 
   return (
     <>
-      <main className="home">
+      <main className="home gray-background">
         <section className="section2" aria-label="Image Carousel Section">
           {carouselImages.map((image, index) => (
             <img

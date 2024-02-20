@@ -1,7 +1,6 @@
 import "../HomePage/index.css";
 import "./index.css";
-import cnData from "../HomePage/cnData";
-import engData from "../HomePage/engData";
+import { engData, cnData } from "../../util/util";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 import GoogleMapComponent from "../Maps";
 

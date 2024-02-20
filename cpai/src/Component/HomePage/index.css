@@ -7,7 +7,6 @@
   display: block;
   overflow: hidden;
   position: relative; /* Ensure position relative is set */
-
 }
 
 .section2 .description {
@@ -96,6 +95,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: rgb(244, 244, 244); */
+
 }
 
 .section3 h2{
