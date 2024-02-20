@@ -1,24 +1,8 @@
-body.dark {
-    --color-background: #1f2023;
-    --color-foreground: #efefef;
-
-    --image-grayscale: 50%;
-    --image-opacity: 90%;
-}
-
-img,
-video {
-    filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
-}
-
-/* DarkModeToggle.css */
-
 .dark-mode-toggle {
     position: relative;
     width: 60px;
     height: 34px;
-    margin-left: 20px;
-    /* Add space on the left */
+    margin-left: 20px; /* Add space on the left */
 }
 
 .dark-mode-toggle button {
@@ -31,44 +15,38 @@ video {
     cursor: pointer;
     border-radius: 17px;
     padding: 2px;
-    position: relative;
-    /* Ensure relative positioning for child elements */
+    position: relative; /* Ensure relative positioning for child elements */
+    transition: background 0.3s ease; /* Add transition for button background */
 }
 
 .dark-mode-toggle .slider {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 2px;
-    /* Adjust the left position to align with the start of the toggle button */
+    left: 2px; /* Adjust the left position to align with the start of the toggle button */
     cursor: pointer;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     background-color: #fff;
-    transition: transform 0.3s ease;
-    z-index: 1;
-    /* Ensure the slider is above the toggle button */
+    transition: left 0.3s ease; /* Add transition for slider position */
+    z-index: 1; /* Ensure the slider is above the toggle button */
 }
 
 .dark-mode-toggle.dark-mode .slider {
-    left: calc(100% - 32px);
-    /* Adjust the left position to align with the end of the toggle button */
+    left: calc(100% - 32px); /* Adjust the left position to align with the end of the toggle button */
 }
 
 .dark-mode-toggle.dark-mode button {
     background: #999;
 }
 
-
 .dark-mode-toggle button:focus:not(:focus-visible) {
-    outline: none;
-    /* Remove outline for non-keyboard focus */
+    outline: none; /* Remove outline for non-keyboard focus */
 }
 
 .dark-mode-toggle button:focus-visible {
-    outline: 2px solid #ffffff;
-    /* White outline */
+    outline: 2px solid #ffffff; /* White outline */
     outline-offset: 2px;
 }
 
