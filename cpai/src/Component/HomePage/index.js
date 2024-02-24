@@ -24,6 +24,7 @@ const HomePage = () => {
   }, [currentIndex, carouselImages.length]);
 
   const { selectedLanguage } = useLanguage();
+  
   const data = selectedLanguage === "en" ? engData : cnData;
 
 
