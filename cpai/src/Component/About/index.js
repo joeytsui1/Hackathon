@@ -4,6 +4,7 @@ import GoogleMapComponent from "../Maps";
 import { useLanguage } from "../LanguageSwitcher/LanguageContext";
 
 const About = () => {
+  
   const { selectedLanguage } = useLanguage();
   const data = selectedLanguage === "en" ? engData : cnData;
 
