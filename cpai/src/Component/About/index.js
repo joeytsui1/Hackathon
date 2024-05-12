@@ -10,20 +10,20 @@ const About = () => {
 
   return (
     <>
-      // <main className="container">
-      //   <section className="about-section">
-      //     <h1 className="about-us-header">{data.ourCompanyHeading}</h1>
+      <main className="container">
+        <section className="about-section">
+          <h1 className="about-us-header">{data.ourCompanyHeading}</h1>
 
-      //     <p>{data.ourCompanyText1}</p>
+          <p>{data.ourCompanyText1}</p>
 
-      //     <p>{data.ourCompanyText2}</p>
-      //     <div>
-      //       <img
-      //         src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/paboutus.jpg"
-      //         alt="About Us"
-      //       ></img>
-      //     </div>
-      //   </section>
+          <p>{data.ourCompanyText2}</p>
+          <div>
+            <img
+              src="https://cpadvancedimaging.com/wp-content/uploads/2012/04/paboutus.jpg"
+              alt="About Us"
+            ></img>
+          </div>
+        </section>
 
         <div className="container">
           <section className="contact-section">
